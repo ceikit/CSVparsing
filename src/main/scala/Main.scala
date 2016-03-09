@@ -21,7 +21,7 @@ object Main {
 
     val dataCheck = DataCheckSingleAsset(tradesFile, quoteFile)
 
-    println("THE DAYS MATCH: " + dataCheck.daysMatch)
+    //println("THE DAYS MATCH: " + dataCheck.daysMatch)
     //println("the ASK > BID always: " + dataCheck.quoteCheck.bidLessThanAsk)
 
     //dataCheck.dataPlot.tradeDataPlot.tradesPerDayPlot
@@ -36,10 +36,9 @@ object Main {
 
     lazy val totTrades = dataCheck.tradeCheck.tradesData.count()
     lazy val totQuotes = dataCheck.quoteCheck.quoteData.count()
-    lazy val tradesOff = dataCheck.tradingSessionCheck.tradesOffSession
-    val quotesOff = dataCheck.tradingSessionCheck.quotesOffSession
 
-    tradesOff.foreach(println)
+    dataCheck.tradingSessionCheck.tradesOffSession.foreach(println)
+
     /*
     println("total number of Trades: " + dataCheck.tradeCheck.tradesData.count())
     println("total number of Quotes: " + dataCheck.quoteCheck.quoteData.count())
