@@ -1,7 +1,6 @@
 
 
 
-
 object Main {
 
   def main(args: Array[String]): Unit ={
@@ -37,7 +36,19 @@ object Main {
     lazy val totTrades = dataCheck.tradeCheck.tradesData.count()
     lazy val totQuotes = dataCheck.quoteCheck.quoteData.count()
 
-    dataCheck.tradingSessionCheck.tradesOffSession.foreach(println)
+
+    println(dataCheck.sizeCheck.minTradeSize , dataCheck.sizeCheck.minQuoteSize, dataCheck.sizeCheck.median, dataCheck.sizeCheck.roundMultiples)
+    println(dataCheck.quoteCheck.sanityChecksQuotes.numberOfZeroSPREAD)
+    println(dataCheck.priceIncrementCheck.tickSize)
+    println(dataCheck.priceIncrementCheck.roundMultiples)
+    //dataCheck.dataPlot.tradeDataPlot.sizeHistogram(100)
+
+
+    //println(ManageDirectory.getListOfFiles( new File("/Users/ceikit/Development/Scala")))
+
+    /*
+    dataCheck.tradingSessionCheck.summaryTradesOff.printSummary()
+    dataCheck.tradingSessionCheck.summaryQuotesOff.printSummary()*/
 
     /*
     println("total number of Trades: " + dataCheck.tradeCheck.tradesData.count())

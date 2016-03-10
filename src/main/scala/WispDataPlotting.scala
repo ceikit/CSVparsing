@@ -1,15 +1,11 @@
 import com.quantifind.charts.Highcharts._
 
-/**
- * Created by ceikit on 3/8/16.
- */
 
+case class WispDataPlotting(dataCheck : DataCheckSingleAsset) {
 
-case class WispDataPlotting(tradesCheck : TradeCheck) {
+  lazy val tradesPerDay = dataCheck.tradeCheck.tradesPerDay
 
-  lazy val tradesPerDay = tradesCheck.tradesPerDay
-
-  lazy val volumePerDay = tradesCheck.volumePerDayTraded
+  lazy val volumePerDay = dataCheck.tradeCheck.volumePerDayTraded
 
 
   def tradesPerDayPlot = {
@@ -25,6 +21,13 @@ case class WispDataPlotting(tradesCheck : TradeCheck) {
 
   def volumePerdayPlot = {
     column(volumePerDay.values.collect().toList); legend(List("Total Volume per day"))
+  }
+
+  def sizeHistogram(n: Int) = {
+    //histogram(tradesCheck.tradesData.values.map(_.size).collect(), 50)
+    histogram(dataCheck.sizeCheck.binnedSize(n).collect().toList)
+    legend(List("Istogram of Trades Size"))
+
   }
 }
 
