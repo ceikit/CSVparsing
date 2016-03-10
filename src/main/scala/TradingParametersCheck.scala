@@ -1,21 +1,22 @@
 import org.apache.spark.rdd.RDD
 
 
-class TradingParametersCheck {
-
-}
 
 case class LotSizeCheck(tradesData: RDD[(TQTimeKey, Trade)], quotesData: RDD[(TQTimeKey, Quote)]){
 
-  lazy val sizeRDD = tradesData.values.map(_.size.toLong)
-  lazy val minTradeSize: Double = sizeRDD.min
-  lazy val maxTradeSize: Double = sizeRDD.max
+  lazy val tradeSizeData = tradesData.values.map(_.size.toLong)
+  lazy val minTradeSize: Double = tradeSizeData.min
+  lazy val maxTradeSize: Double = tradeSizeData.max
+  lazy val averageTradeSize = tradeSizeData.mean()
+  
   lazy val minQuoteSize: Double = quotesData.values.map( p => math.min(p.askSize, p.bidSize)).min.toInt
+  lazy val averageQuoteSize =
+    quotesData.values.map( p => p.bidSize ).mean() -> quotesData.values.map( p => p.askSize ).mean()
 
-  lazy val roundMultiples = sizeRDD.map(s => s % minTradeSize).filter( b => b == 0 ).count() == count
+  lazy val roundMultiples = tradeSizeData.map(s => s % minTradeSize).filter( b => b == 0 ).count() == count
 
   lazy val median: Double = {
-    val sorted: RDD[(Long, Long)] = sizeRDD.sortBy(x => x).zipWithIndex().map { case (v, idx) => (idx, v)}
+    val sorted: RDD[(Long, Long)] = tradeSizeData.sortBy(x => x).zipWithIndex().map { case (v, idx) => (idx, v)}
     if (count % 2 == 0) {
       val l = count / 2 - 1
       val r = l + 1
@@ -25,7 +26,7 @@ case class LotSizeCheck(tradesData: RDD[(TQTimeKey, Trade)], quotesData: RDD[(TQ
 
   def binnedSize(n: Int): RDD[(String, Int)] ={
     val listOfBins = binList(n)
-    sizeRDD.map( s => {
+    tradeSizeData.map( s => {
       val selectedBin =
         listOfBins.filter( p => p._1 <= s.toDouble && s.toDouble <= p._2)
       selectedBin.head -> s

@@ -4,7 +4,7 @@ import org.apache.spark.rdd.RDD
 
 case class TradeCheck(tradesData: RDD[(TQTimeKey, Trade)]) {
 
-  lazy val daysOfTrading = tradesData.keys.groupBy( k => k.date ).keys.collect().sorted
+  lazy val daysOfTrading: Array[TQDate] = tradesData.keys.groupBy( k => k.date ).keys.collect().sorted
 
   lazy val tradesPerDay: RDD[(TQDate, Int)] = // daily number of Trades
     tradesData.map( t => (t._1.date, 1)).foldByKey(0)(_ + _).sortByKey()

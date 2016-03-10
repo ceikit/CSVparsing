@@ -19,6 +19,19 @@ case class WispDataPlotting(dataCheck : DataCheckSingleAsset) {
     }
   }
 
+  def frequencyOfTrades = {
+    line(tradesPerDay.values.collect().toList.map(n => 5*3600/n.toDouble))
+    legend(List("Frequency of Trades: totSeconds/ numberOfTrades"))
+  }
+
+  def tradesToQuoteRatioDailyPlot = {
+    line(dataCheck.tradeToQuoteDailyRatio.dailyTradeToQuoteRatio.sortByKey().values.collect().toList)
+    legend(List("Daily Quotes/Trades ratio"))
+  }
+
+  def dailyCloseReturns = {
+    line(dataCheck.returnCheck.dailyCloseReturns.values.collect().toList) ; legend(List("Daily Close Returns"))
+  }
   def volumePerdayPlot = {
     column(volumePerDay.values.collect().toList); legend(List("Total Volume per day"))
   }

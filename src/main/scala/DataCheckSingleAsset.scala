@@ -14,8 +14,12 @@ case class DataCheckSingleAsset(tradesFile: String, quoteFile: String) {
   lazy val tradeCheck: TradeCheck = TradeCheck(tradesData)
   lazy val quoteCheck: QuoteCheck = QuoteCheck(quoteData)
 
+  lazy val tradeToQuoteDailyRatio = TradeToQuoteRatioDaily(tradeCheck,quoteCheck)
+
   lazy val sizeCheck = LotSizeCheck(tradesData, quoteData)
   lazy val priceIncrementCheck = PriceIncrementCheck(tradesData, quoteData)
+
+  lazy val returnCheck = Returns(tradesData)
 
   def daysMatch: Boolean = { // for each Trade Day there is a Quote Day
   val boolArray =

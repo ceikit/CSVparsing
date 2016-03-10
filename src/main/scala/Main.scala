@@ -36,12 +36,21 @@ object Main {
     lazy val totTrades = dataCheck.tradeCheck.tradesData.count()
     lazy val totQuotes = dataCheck.quoteCheck.quoteData.count()
 
+    //println(dataCheck.returnCheck.returnsStandardDeviation)
 
+    //dataCheck.dataPlot.tradeDataPlot.tradesToQuoteRatioDailyPlot
+
+    //println(dataCheck.sizeCheck.minTradeSize, dataCheck.sizeCheck.averageTradeSize,
+    //  dataCheck.sizeCheck.minQuoteSize, dataCheck.sizeCheck.averageQuoteSize)
+
+
+    println(dataCheck.tradeCheck.tradesPerDay.values.map(p=> 5*3600/p.toFloat).mean())
+    /*
     println(dataCheck.sizeCheck.minTradeSize , dataCheck.sizeCheck.minQuoteSize, dataCheck.sizeCheck.median, dataCheck.sizeCheck.roundMultiples)
     println(dataCheck.quoteCheck.sanityChecksQuotes.numberOfZeroSPREAD)
     println(dataCheck.priceIncrementCheck.tickSize)
     println(dataCheck.priceIncrementCheck.roundMultiples)
-    //dataCheck.dataPlot.tradeDataPlot.sizeHistogram(100)
+    //dataCheck.dataPlot.tradeDataPlot.sizeHistogram(100)*/
 
 
     //println(ManageDirectory.getListOfFiles( new File("/Users/ceikit/Development/Scala")))

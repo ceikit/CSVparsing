@@ -6,11 +6,13 @@ import org.apache.poi.ss.usermodel.DateUtil
  * Created by ceikit on 3/3/16.
  */
 
+case class TQDateNoName(year: String, month: String, dayNumber: Int)
 
-case class TQDate(year: String, month: String, dayNumber: String, dayName: String ) extends Ordered[TQDate] {
+case class TQDate(year: String, month: String, dayNumber: Int, dayName: String ) extends Ordered[TQDate] {
   import scala.math.Ordered.orderingToOrdered
   def compare(that: TQDate) = (this.year, this.month, this.dayNumber) compare (that.year, that.month, that.dayNumber)
   def dateToString() = this.year + '/' + this.month + '/' + this.dayNumber + " (" + this.dayName + ')'
+  def toNoName = TQDateNoName(year, month, dayNumber)
 }
 
 case class TQTimeStamp(time: String, milliseconds: Int) extends Ordered[TQTimeStamp]{
@@ -48,7 +50,7 @@ object TimeFormattingUtilities {
 
   def fromCSVdateToTradeDate(dateT: String): TQDate = {
     val date: Array[String] = DateUtil.getJavaDate(dateT.toDouble).toString.split(' ')
-    TQDate(date.last, parseMonth(date(1)), date(2), date(0))
+    TQDate(date.last, parseMonth(date(1)), date(2).toInt, date(0))
   }
 
   def fromCSVtimeStampToTradeTimeStamp( timeStampT: String ) : TQTimeStamp = {
