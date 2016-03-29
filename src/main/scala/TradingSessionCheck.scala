@@ -2,10 +2,10 @@ import org.apache.spark.rdd.RDD
 
 case class TradingSessionCheck(tradesData: RDD[(TQTimeKey, Trade)], quoteData: RDD[(TQTimeKey, Quote)]){
 
-  lazy val tradesOffSession = offSession(tradesData)
+  lazy val tradesOffSession: RDD[(TQTimeKey, OffSession with Product with Serializable)] = offSession(tradesData)
   lazy val quotesOffSession: RDD[(TQTimeKey, OffSession with Product with Serializable)] = offSession(quoteData)
 
-  lazy val summaryTradesOff = summary(tradesOffSession.values)
+  lazy val summaryTradesOff: CounterWrapper = summary(tradesOffSession.values)
   lazy val summaryQuotesOff = summary(quotesOffSession.values)
 
 
@@ -62,6 +62,7 @@ case class TradingSessionCheck(tradesData: RDD[(TQTimeKey, Trade)], quoteData: R
 }
 
 case class CounterWrapper(tradesOrQuotes: String, offSessionCounter: OffSessionCounter){
+
   def printSummary() = {
     println(tradesOrQuotes + " off-session" )
     println("----------------------")

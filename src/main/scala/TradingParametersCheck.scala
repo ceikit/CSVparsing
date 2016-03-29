@@ -25,9 +25,9 @@ case class LotSizeCheck(tradesData: RDD[(TQTimeKey, Trade)], quotesData: RDD[(TQ
   }
 
   def binnedSize(n: Int): RDD[(String, Int)] ={
-    val listOfBins = binList(n)
+    val listOfBins: List[(Double, Double)] = binList(n)
     tradeSizeData.map( s => {
-      val selectedBin =
+      val selectedBin: List[(Double, Double)] =
         listOfBins.filter( p => p._1 <= s.toDouble && s.toDouble <= p._2)
       selectedBin.head -> s
     } ).groupByKey().sortByKey()

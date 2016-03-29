@@ -157,5 +157,7 @@
         <jarDirectory url="file://$USER_HOME$/Downloads/wisp-master" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.apache.spark:spark-hive_2.11:1.6.0" level="application" />
+    <orderEntry type="library" name="org.apache.spark:spark-sql_2.11:1.6.0" level="application" />
   </component>
 </module>

@@ -1,8 +1,6 @@
 import org.apache.spark.rdd.RDD
 
-/**
- * Created by ceikit on 3/10/16.
- */
+
 class QuantitativeCheck {
 
 }

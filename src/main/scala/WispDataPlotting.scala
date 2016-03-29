@@ -36,13 +36,16 @@ case class WispDataPlotting(dataCheck : DataCheckSingleAsset) {
     column(volumePerDay.values.collect().toList); legend(List("Total Volume per day"))
   }
 
+
+
   def sizeHistogram(n: Int) = {
     //histogram(tradesCheck.tradesData.values.map(_.size).collect(), 50)
     histogram(dataCheck.sizeCheck.binnedSize(n).collect().toList)
     legend(List("Istogram of Trades Size"))
-
   }
+
 }
+
 
 
 
