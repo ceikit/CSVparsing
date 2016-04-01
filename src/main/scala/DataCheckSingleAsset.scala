@@ -5,6 +5,9 @@ case class DataCheckSingleAsset(tradesFile: String, quoteFile: String) {
 
   val context: SparkContext = SparkCSVParsing.sc
 
+  lazy val tradesAndQuotesData: RDD[(TQTimeKey, TradeAndQuote)] =
+    SparkCSVParsing.makeTradesAndQuotesDataSet(tradesFile)
+
   lazy val tradesData: RDD[(TQTimeKey, Trade)] =
     SparkCSVParsing.makeTradesArray(tradesFile).persist()
 
@@ -25,7 +28,7 @@ case class DataCheckSingleAsset(tradesFile: String, quoteFile: String) {
   val boolArray =
     for{
       (tradeDay, quoteDay) <- tradeCheck.daysOfTrading.zip(quoteCheck.daysOfQuotes)
-    } yield tradeDay == quoteDay
+    } yield {println(tradeDay, quoteDay); tradeDay == quoteDay}
     boolArray.forall(b => b) && tradeCheck.firstDay == quoteCheck.firstDay && tradeCheck.lastDay ==  quoteCheck.lastDay
   }
 

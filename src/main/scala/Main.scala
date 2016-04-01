@@ -12,17 +12,11 @@ object Main {
 
 
 
+
     //hold
     //line(dataCheck.quoteData.mapValues(q => ((q.bid+q.ask)/2-491.5)/(499.55-491.5)).sortByKey().values.take(3000).toList.drop(1000))
 
     //println(ManageDirectory.getListOfFiles( new File("/Users/ceikit/Development/Scala")))
-
-
-
-
-
-
-
 
 
   }

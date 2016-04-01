@@ -7,10 +7,34 @@ object SparkCSVParsing {
   val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing").set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
   val sc = new SparkContext(conf)
 
+  def makeTradesAndQuotesDataSet(fileName: String): RDD[(TQTimeKey, TradeAndQuote)] = {
+
+    val file: RDD[String] = sc.textFile(fileName)
+    val data: RDD[List[String]] = file.map(_.split(",").toList).filter(t => t.head != "date_xl" && t.head !="#date_xl")
+
+    data.map(d => {
+      val g: Array[String] = d.toArray
+      val date = TimeFormattingUtilities.fromCSVdateToTradeDate(g(0))
+      val timeStamp = TimeFormattingUtilities.fromCSVtimeStampToTradeTimeStamp(g(1))
+      val Bid = g(2).toDouble
+      val bidSize = g(3).toDouble
+      val Ask = g(4).toDouble
+      val askSize = g(5).toDouble
+      val tradePrice = g(6).toDouble
+      val tradeSize = g(7).toDouble
+      val tradeSign = tradePrice match {
+        case Bid => -1
+        case Ask => 1
+        case _ => 0
+      }
+      TQTimeKey(date, timeStamp) -> TradeAndQuote(Bid, bidSize, Ask, askSize, tradePrice, tradeSize, tradeSign)
+    })
+  }
+
   def makeTradesArray(fileName: String): RDD[(TQTimeKey, Trade)] = {
 
     val file: RDD[String] = sc.textFile(fileName)
-    val data = file.map(_.split(",").toList).filter(t => t.head != "date_xl" && t.head !="#date_xl")
+    val data: RDD[List[String]] = file.map(_.split(",").toList).filter(t => t.head != "date_xl" && t.head !="#date_xl")
 
     data.map(d => {
       val g: Array[String] = d.toArray
@@ -37,7 +61,9 @@ object SparkCSVParsing {
       val ask = g(4).toDouble
       val askSize = g(5).toDouble
       TQTimeKey(date, timeStamp) -> Quote(bid, bidSize, ask, askSize)
-    }).filter{case (key, quote) => quote.ask > 0 && quote.bid > 0}
+    })
+      .filter{case (key, quote) => quote.ask > 0 && quote.bid > 0}
+      .filter( q => q._2.bidSize > 0 && q._2.askSize > 0 )
 
   }
 
