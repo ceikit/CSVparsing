@@ -25,8 +25,32 @@ case class TradesQuotesClass(dateString: String,
                              tradeSize: Double,
                              tradeSign: Int)
 
+case class TradesQuotesMinuteClass(dateString: String,
+                             day: String,
+                             dayName:String,
+                             month: String,
+                             year: String,
+                             hour: String,
+                             second: String,
+                             millisecond: String,
+                             bid: Double,
+                             bidSize: Double,
+                             ask: Double,
+                             askSize: Double,
+                             tradePrice: Double,
+                             tradeSize: Double,
+                             tradeSign: Int)
+
+case class AggregateMinuteData(dateString: String,
+                         hour: String,
+                         tradedVolume: Double,
+                         tradeFlow: Double,
+                         averageSpread: Double,
+                         realizedVariance: Double,
+                         returns: Double)
 
 
+  
 //Traded volume (sum of trade sizes)
 // Number of trades (count of trades)
 // Trade flow (sum of trade sizes multiplied by trade signs)

@@ -4,7 +4,7 @@
 		module="csvparsing_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160331124122"
+		publication="20160405133150"
 	>
 		<description>
 		CSVparsing
@@ -38,5 +38,8 @@
 		<dependency org="org.apache.poi" name="poi" rev="3.9" conf="compile->default(compile)"/>
 		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" conf="compile->default(compile)"/>
 		<dependency org="com.quantifind" name="wisp_2.11" rev="0.0.5" conf="compile->default(compile)"/>
+		<dependency org="org.scalanlp" name="breeze_2.11" rev="0.12" conf="compile->default(compile)"/>
+		<dependency org="org.scalanlp" name="breeze-natives_2.11" rev="0.12" conf="compile->default(compile)"/>
+		<dependency org="org.scalanlp" name="breeze-viz_2.11" rev="0.12" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

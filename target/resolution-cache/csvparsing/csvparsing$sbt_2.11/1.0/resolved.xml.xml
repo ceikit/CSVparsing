@@ -4,7 +4,7 @@
 		module="csvparsing$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160331124044"
+		publication="20160405133109"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

@@ -67,5 +67,46 @@ object SparkCSVParsing {
 
   }
 
+  def makeDataSet(fileName: String): RDD[TradesQuotesClass] = {
+    makeTradesAndQuotesDataSet(fileName)
+      .map( t => {
+
+      val date = t._1.date
+      val year =  t._1.date.year
+      val month = t._1.date.month
+      val day = t._1.date.dayNumber.toString
+      val dayName = t._1.date.dayName
+      val time = t._1.timeStamp.time
+      val millisecond = t._1.timeStamp.milliseconds.toString
+      val dateString =  s"$year-$month-$day"
+
+      TradesQuotesClass(dateString, day, dayName, month, year, time, millisecond,
+        t._2.bid, t._2.bidSize, t._2.ask, t._2.askSize, t._2.tradePrice, t._2.tradeSize, t._2.tradeSign)
+    } )}
+
+  def makeMinuteDataSet(fileName: String): RDD[TradesQuotesMinuteClass] = {
+    def secondToMinute(s: String) = {
+      val array = s.split(':')
+      array(0) + ':' + array(1)
+    }
+    def secondString(s: String) = s.split(':').last
+
+
+    makeTradesAndQuotesDataSet(fileName)
+      .map( t => {
+
+      val date = t._1.date
+      val year =  t._1.date.year
+      val month = t._1.date.month
+      val day = t._1.date.dayNumber.toString
+      val dayName = t._1.date.dayName
+      val time = t._1.timeStamp.time
+      val millisecond = t._1.timeStamp.milliseconds.toString
+      val dateString =  s"$year-$month-$day"
+
+      TradesQuotesMinuteClass(dateString, day, dayName, month, year, secondToMinute(time),secondString(time), millisecond,
+        t._2.bid, t._2.bidSize, t._2.ask, t._2.askSize, t._2.tradePrice, t._2.tradeSize, t._2.tradeSign)
+    } )}
+
 }
 

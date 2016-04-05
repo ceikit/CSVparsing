@@ -1,4 +1,3 @@
-import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.hive.HiveContext
 
@@ -12,31 +11,12 @@ object Imbalance {
   // sashastoikov@gmail.com_7203.T_tradesQuotes_20130103_20150909.csv
   //sashastoikov@gmail.com_8604.T_tradesQuotes_20130103_20150909.csv
 
-  val tradesFile = "sashastoikov@gmail.com_8604.T_tradesQuotes_20130103_20150909.csv.gz"
+  val tradesFile = "sashastoikov@gmail.com_7203.T_tradesQuotes_20130103_20150909.csv.gz"
 
-  lazy val dataCheck = DataCheckSingleAsset(tradesFile, "")
+  val hiveCtx = new HiveContext(SparkCSVParsing.sc)
+  import Imbalance.hiveCtx.implicits._
 
-  val hiveCtx = new HiveContext(dataCheck.context)
-  import hiveCtx.implicits._
-
-  def makeDataSet(tradeSet: RDD[(TQTimeKey, TradeAndQuote)]) = {
-    tradeSet
-      .map( t => {
-
-      val date = t._1.date
-      val year =  t._1.date.year
-      val month = t._1.date.month
-      val day = t._1.date.dayNumber.toString
-      val dayName = t._1.date.dayName
-      val time = t._1.timeStamp.time
-      val millisecond = t._1.timeStamp.milliseconds.toString
-      val dateString =  s"$year-$month-$day"
-
-      TradesQuotesClass(dateString, day, dayName, month, year, time, millisecond,
-        t._2.bid, t._2.bidSize, t._2.ask, t._2.askSize, t._2.tradePrice, t._2.tradeSize, t._2.tradeSign)
-    } )}
-
-  lazy val tradesAndQuotes: Dataset[TradesQuotesClass] = makeDataSet(dataCheck.tradesAndQuotesData).toDS()
+  lazy val tradesAndQuotes: Dataset[TradesQuotesClass] = SparkCSVParsing.makeDataSet(tradesFile).toDS()
 
 
   lazy val coder: (Double, Double, Array[((Double, Double), Int)]) => Int =
@@ -68,7 +48,7 @@ object Imbalance {
     }
   }
 
-  lazy val sellVolume = makeVolumeImbalance(tradesAndQuotes, -1, 1000)
+  lazy val sellVolume: Dataset[(Int, Long)] = makeVolumeImbalance(tradesAndQuotes, -1, 1000)
   lazy val buyVolume = makeVolumeImbalance(tradesAndQuotes, 1, 1000)
 
   def volumeToImbalancePlot = {
