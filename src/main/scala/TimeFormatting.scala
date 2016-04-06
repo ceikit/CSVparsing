@@ -23,7 +23,17 @@ case class TQTimeStamp(time: String, milliseconds: Int) extends Ordered[TQTimeSt
 
 case class TQTimeKey(date: TQDate, timeStamp: TQTimeStamp) extends Ordered[TQTimeKey]{
   import scala.math.Ordered.orderingToOrdered
-  def compare(that: TQTimeKey) = (this.date, this.timeStamp) compare (that.date, that.timeStamp)
+  def compare(that: TQTimeKey): Int = (this.date, this.timeStamp) compare (that.date, that.timeStamp)
+}
+
+case class TQTimeKeyNumerical(numericDate: Int, numericTime: Double,numericSecond: Int, numericMillisecond: Int, date: TQDate, timeStamp: TQTimeStamp) extends Ordered[TQTimeKeyNumerical]{
+  import scala.math.Ordered.orderingToOrdered
+  def compare(that: TQTimeKeyNumerical) = (this.numericDate, this.numericTime) compare (that.numericDate, that.numericTime)
+}
+
+case class NumericTime(numericDate: Int, numericTime: Double, numericSecond: Int, numericMillisecond: Int) extends Ordered[NumericTime]{
+  import scala.math.Ordered.orderingToOrdered
+  def compare(that: NumericTime) = (this.numericDate, this.numericTime: Double) compare (that.numericDate, that.numericTime: Double)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,6 +52,17 @@ object TQTimeKey {
   implicit def ordering[A <: TQTimeKey]: Ordering[A] =
     Ordering.by(t => (t.date, t.timeStamp))
 }
+
+object TQTimeKeyNumerical {
+  implicit def ordering[A <: TQTimeKeyNumerical]: Ordering[A] =
+    Ordering.by(t => (t.numericDate, t.numericTime))
+}
+
+object NumericTime{
+  implicit def ordering[A <: NumericTime]: Ordering[A] =
+    Ordering.by(t => (t.numericDate, t.numericTime))
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

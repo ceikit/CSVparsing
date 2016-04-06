@@ -2,39 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b7e780d-6c32-4af0-9413-cf1ceb36bbde" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MinuteAggregation.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/CSVparsing.scala" afterPath="$PROJECT_DIR$/src/main/scala/CSVparsing.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Imbalance.scala" afterPath="$PROJECT_DIR$/src/main/scala/Imbalance.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala" afterPath="$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing$sbt_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing$sources_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/csvparsing.iml" afterPath="$PROJECT_DIR$/.idea/modules/csvparsing.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing_2.11/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" afterPath="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CSVparsing.iws" />
@@ -63,31 +34,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MinuteAggregation.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/MinuteAggregation.scala">
+      <file leaf-file-name="FairPrice.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
-              <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.890511" vertical-offset="1344" max-vertical-offset="2010">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FairPriceFiltering.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="870">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinuteAggregationMain.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSVparsing.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSVparsing.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/CSVparsing.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23763955" vertical-offset="541" max-vertical-offset="1755">
-              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="2610">
+              <caret line="140" column="50" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeFormatting.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/TimeFormatting.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1620">
+              <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -102,12 +85,15 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ModifiedTimeKey" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/TradeQuotePrint.scala" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/NumberAxis.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/Region.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/Axis.java" />
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/XYChart.java" />
@@ -119,7 +105,6 @@
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/time/LocalTime.java" />
         <option value="$PROJECT_DIR$/src/main/scala/DataCheck.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ManageDirectory.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/TradingMain.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Trading/ClosePrice.scala" />
         <option value="$PROJECT_DIR$/fileProva.csv" />
@@ -146,17 +131,20 @@
         <option value="$PROJECT_DIR$/src/test/scala/Example/DaysCheck.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DataCheckSingleAsset.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/Imbalance.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/TransformRDD.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MinuteAggragation.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/MinuteAggregationMain.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/CSVparsing.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Imbalance.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/MinuteAggregation.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/TransformRDD.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/CSVparsing.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/FairPrice.scala" />
       </list>
     </option>
   </component>
@@ -287,6 +275,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSVparsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSVparsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataCheckSingleAsset.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -324,24 +338,7 @@
       <recent name="Trading" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MinuteAggregationMain">
-    <configuration default="false" name="DaysCheck" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="DaysCheck" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="csvparsing" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.FairPriceFiltering">
     <configuration default="false" name="ImbalanceManipulation" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ImbalanceManipulation" />
@@ -413,6 +410,29 @@
       <module name="csvparsing" />
       <envs />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FairPriceFiltering" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="FairPriceFiltering" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="csvparsing" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -631,19 +651,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.DaysCheck" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ImbalanceManipulation" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MinuteAggregation" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MinuteAggregationMain" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ImbalanceTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ImbalanceManipulation" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MinuteAggregation" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MinuteAggregationMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ImbalanceTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.FairPriceFiltering" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MinuteAggregationMain" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ImbalanceTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ImbalanceManipulation" />
-        <item index="3" class="java.lang.String" itemvalue="Application.MinuteAggregation" />
-        <item index="4" class="java.lang.String" itemvalue="Application.DaysCheck" />
+        <item index="0" class="java.lang.String" itemvalue="Application.FairPriceFiltering" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MinuteAggregationMain" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ImbalanceTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ImbalanceManipulation" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MinuteAggregation" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -717,7 +737,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459541706115</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Minute Aggregation">
+      <created>1459883560603</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1459883560603</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -742,7 +768,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -750,6 +776,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54351145" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -763,12 +790,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -791,11 +817,12 @@
     <MESSAGE value="size and price increment check + code refactoring" />
     <MESSAGE value="test introduced" />
     <MESSAGE value="imbalance test" />
-    <option name="LAST_COMMIT_MESSAGE" value="imbalance test" />
+    <MESSAGE value="Minute Aggregation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minute Aggregation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -804,34 +831,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/highcharts/Data.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038860105" vertical-offset="0" max-vertical-offset="386">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/highcharts/Highchart.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/highcharts/Series.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038860105" vertical-offset="0" max-vertical-offset="386">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/highcharts/AxisType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="225">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/repl/HighchartsStyles.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15544042" vertical-offset="0" max-vertical-offset="386">
@@ -993,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/TimeFormatting.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Trading/ClosePrice.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
@@ -1018,13 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="900">
           <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/functions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="4830">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1070,24 +1055,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DataCheckSingleAsset.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1970803" vertical-offset="384" max-vertical-offset="795">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/QuantitativeCheck.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="735">
           <caret line="35" column="43" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="990">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1115,34 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08759124" vertical-offset="204" max-vertical-offset="690">
-          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25547445" vertical-offset="0" max-vertical-offset="411">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/TransformRDD.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="825">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Imbalance.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25060827" vertical-offset="418" max-vertical-offset="1035">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1163,11 +1110,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DataCheckSingleAsset.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16746412" vertical-offset="0" max-vertical-offset="795">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/TransformRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="825">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Imbalance.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18660288" vertical-offset="93" max-vertical-offset="1035">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="10" column="95" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/DataFrame.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3549223" vertical-offset="1228" max-vertical-offset="2730">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/GroupedData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.84" vertical-offset="219" max-vertical-offset="630">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/TimeFormatting.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1620">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="870">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/CSVparsing.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23763955" vertical-offset="541" max-vertical-offset="1755">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1983" max-vertical-offset="2610">
+          <caret line="140" column="50" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/functions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4326425" vertical-offset="1813" max-vertical-offset="4830">
+          <caret line="132" column="6" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.890511" vertical-offset="1344" max-vertical-offset="2010">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
