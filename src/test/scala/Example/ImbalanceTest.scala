@@ -1,3 +1,7 @@
+package Example
+
+import Checks.DataCheckSingleAsset
+import ParsingStructure.TransformRDD
 import org.apache.spark.rdd.RDD
 
 object ImbalanceTest {
@@ -16,7 +20,6 @@ object ImbalanceTest {
 
     val binnedImbalance: RDD[(String, Int)] = TransformRDD.binnedRDD(100,
       dataCheck.quoteData
-        //.filter( f => f._1.date.month.toInt == 2)
         .filter( q => q._2.ask - q._2.bid == 5.0)
         .values.map(q => q.bidSize/(q.bidSize+q.askSize)))
 

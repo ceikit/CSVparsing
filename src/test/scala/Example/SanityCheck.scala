@@ -1,3 +1,4 @@
+import Checks.DataCheckSingleAsset
 
 object SanityCheck {
 

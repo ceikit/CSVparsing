@@ -8,8 +8,8 @@ object QuantitativeCheck {
   def main(args: Array[String]): Unit ={
 
 
-    //TradeToQuoteRatioDaily
-    //Returns
+    //Checks.TradeToQuoteRatioDaily
+    //Checks.Returns
     //returnsStandardDeviation
 
 

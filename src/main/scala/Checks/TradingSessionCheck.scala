@@ -1,3 +1,6 @@
+package Checks
+import ParsingStructure._
+
 import org.apache.spark.rdd.RDD
 
 case class TradingSessionCheck(tradesData: RDD[(TQTimeKey, Trade)], quoteData: RDD[(TQTimeKey, Quote)]){

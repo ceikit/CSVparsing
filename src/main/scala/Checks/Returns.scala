@@ -1,17 +1,8 @@
 import org.apache.spark.rdd.RDD
-
-
-class QuantitativeCheck {
-
-}
-
-
-case class TradeToQuoteRatioDaily(tradeCheck: TradeCheck, quoteCheck: QuoteCheck){
-  lazy val dailyTradeToQuoteRatio: RDD[(TQDate, Float)] =
-    tradeCheck.tradesPerDay.join(quoteCheck.quotesPerDay)
-      .mapValues{case(tradesNumber,quotesNumber)=>quotesNumber.toFloat/tradesNumber.toFloat }
-}
-
+import ParsingStructure._
+/**
+  * Created by ceikit on 4/8/16.
+  */
 case class Returns(tradesData: RDD[(TQTimeKey, Trade)]){
 
   lazy val dailyCloseTrades: RDD[(TQDate, Trade)] =

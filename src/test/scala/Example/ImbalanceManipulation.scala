@@ -1,4 +1,7 @@
 
+package Example
+
+import FairPrice.Imbalance
 
 object ImbalanceManipulation {
 

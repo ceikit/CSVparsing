@@ -1,4 +1,4 @@
-
+import Checks.DataCheckSingleAsset
 
 
 object Main {

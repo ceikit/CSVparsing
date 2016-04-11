@@ -1,3 +1,5 @@
+package ParsingStructure
+
 import org.apache.spark.rdd.RDD
 
 /**

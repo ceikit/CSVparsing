@@ -1,3 +1,6 @@
+package ParsingStructure
+
+import Checks.DataCheckSingleAsset
 import com.quantifind.charts.Highcharts._
 
 
@@ -30,7 +33,7 @@ case class WispDataPlotting(dataCheck : DataCheckSingleAsset) {
   }
 
   def dailyCloseReturns = {
-    line(dataCheck.returnCheck.dailyCloseReturns.values.collect().toList) ; legend(List("Daily Close Returns"))
+    line(dataCheck.returnCheck.dailyCloseReturns.values.collect().toList) ; legend(List("Daily Close Checks.Returns"))
   }
   def volumePerdayPlot = {
     column(volumePerDay.values.collect().toList); legend(List("Total Volume per day"))
