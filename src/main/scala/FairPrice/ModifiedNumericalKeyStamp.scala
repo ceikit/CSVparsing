@@ -55,6 +55,7 @@ object ModifiedNumericalKeyStamp {
     })
       .filter{case (key, quote) => quote.ask > 0 && quote.bid > 0}
       .filter( q => q._2.bidSize > 0 && q._2.askSize > 0 )
+      .groupByKey().mapValues(_.last)
 
   }
 }

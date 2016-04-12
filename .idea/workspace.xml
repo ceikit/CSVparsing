@@ -1,80 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b7e780d-6c32-4af0-9413-cf1ceb36bbde" name="Default" comment="Initiated fair price">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/Checks/QuantitativeCheck.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/MidPriceImbalance.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateDailyData.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/Aux.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/DailyAggregation.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayMinuteData.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/Example/Fair.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/FairPrice.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/CSVparsing.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/CSVparsing.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/DataCheckSingleAsset.scala" afterPath="$PROJECT_DIR$/src/main/scala/Checks/DataCheckSingleAsset.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/Imbalance.scala" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/Imbalance.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/MinuteAggregation.scala" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/QuantitativeCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/Checks/Returns.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/TimeFormatting.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TradeQuotePrint.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/TradeQuotePrint.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TradesAndQuotes.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/TradesAndQuotes.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TradesQuoteChecks.scala" afterPath="$PROJECT_DIR$/src/main/scala/Checks/TradesQuoteChecks.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TradingParametersCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/Checks/TradingParametersCheck.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TradingSessionCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/Checks/TradingSessionCheck.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/TransformRDD.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/TransformRDD.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/WispDataPlotting.scala" afterPath="$PROJECT_DIR$/src/main/scala/ParsingStructure/WispDataPlotting.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/SparkCSVParsing$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQDate$$anonfun$ordering$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQDate$$anonfun$ordering$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQDate$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQDate$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeKey$$anonfun$ordering$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeKey$$anonfun$ordering$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeKey$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeKey$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeStamp$$anonfun$ordering$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeStamp$$anonfun$ordering$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeStamp$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TQTimeStamp$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/TimeFormattingUtilities$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/TimeFormattingUtilities$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_11_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_11_7_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/csvparsing-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/csvparsing-build.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/csvparsing.iml" afterPath="$PROJECT_DIR$/.idea/modules/csvparsing.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="8b7e780d-6c32-4af0-9413-cf1ceb36bbde" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceMain.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/MidImbalanceAux.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegression.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionMain.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionPlus.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/NumericAggregateMinuteData.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/RegressionPlus.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/FairPrice/MidPriceImbalance.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/Example/Fair.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/csvparsing-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/csvparsing-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/csvparsing-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/csvparsing-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-csvparsing-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/DaysCheck.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/DaysCheck.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/LotSize.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/LotSize.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/PriceIncrement.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/PriceIncrement.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/QuantitativeCheck.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/QuantitativeCheck.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/SanityCheck.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/SanityCheck.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/TradesQuotesCheck.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/TradesQuotesCheck.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/Example/TradingSession.scala" afterPath="$PROJECT_DIR$/src/test/scala/Example/TradingSession.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala" afterPath="$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala" afterPath="$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sbt_2.11/1.0/resolved.xml.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/csvparsing/csvparsing$sources_2.11/1.0/resolved.xml.properties" />
@@ -96,7 +38,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-sources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test-internal.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/csvparsing-csvparsing_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
     </list>
@@ -129,40 +70,7 @@
     <favorites_list name="CSVparsing" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FairPriceDataFrame.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-              <folding>
-                <element signature="e#19#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MidPriceImbalance.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/MidPriceImbalance.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22222222">
-              <caret line="6" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fair.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/Example/Fair.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -193,16 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/Example/TradingSessionCheck.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/TradingSession.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/QuantitativeChecks.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/LotSizeCheck.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/PriceIncrementCheck.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/PriceIncrement.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DataCheckSingleAsset.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/Imbalance.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/MinuteAggragation.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/MinuteAggregationMain.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/TransformRDD.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/TimeFormatting.scala" />
@@ -218,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/ParsingStructure/TimeFormatting.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ParsingStructure/TradesAndQuotes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ParsingStructure/CSVparsing.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/DaysCheck.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/LotSize.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala" />
@@ -235,15 +132,26 @@
         <option value="$PROJECT_DIR$/src/main/scala/Checks/QuantitativeCheck.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Checks/DataCheckSingleAsset.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/Aux.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/FairPriceFiltering.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/FairPriceDataFrame.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/Example/FairPriceMain.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/FairPrice/FairPrice.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/FairPrice/MidPriceImbalance.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/Example/Fair.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/test/scala/Example/Fair.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/MidImbalanceAux.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceMain.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/Prova.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/NumericAggregateMinuteData.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegression.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionMain.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionPlus.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MarketImpact/RegressionPlus.scala" />
       </list>
     </option>
   </component>
@@ -315,6 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -347,18 +257,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -404,14 +302,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FairPrice" />
+              <option name="myItemId" value="MarketImpact" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,50 +350,15 @@
       <recent name="$PROJECT_DIR$/src/test/scala" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Fair">
-    <configuration default="false" name="ImbalanceManipulation (1)" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.RegressionPlus">
+    <configuration default="false" name="Fair (1)" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="Example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Example.ImbalanceManipulation" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="csvparsing" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="DaysCheck" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Example.DaysCheck" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="csvparsing" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="FairPriceMain" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="FairPriceMain" />
+      <option name="MAIN_CLASS_NAME" value="Example.Fair" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -510,14 +371,74 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Fair" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="FairPriceMain" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Example.*" />
+          <option name="PATTERN" value="FairPrice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Example.Fair" />
+      <option name="MAIN_CLASS_NAME" value="FairPrice.FairPriceMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="csvparsing" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LinearRegressionMain" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="MarketImpact.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="MarketImpact.LinearRegressionMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="csvparsing" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Prova" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="MarketImpact.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="MarketImpact.Prova" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="csvparsing" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegressionPlus" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="MarketImpact.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="MarketImpact.RegressionPlus" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -832,18 +753,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.ImbalanceManipulation (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.DaysCheck" />
-      <item index="2" class="java.lang.String" itemvalue="Application.FairPriceMain" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Fair" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Fair (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.FairPriceMain" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LinearRegressionMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Prova" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RegressionPlus" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Fair" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FairPriceMain" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DaysCheck" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ImbalanceManipulation (1)" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.RegressionPlus" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LinearRegressionMain" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Prova" />
+        <item index="3" class="java.lang.String" itemvalue="Application.FairPriceMain" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Fair (1)" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -929,7 +852,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459973534312</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactored with packages">
+      <created>1460388950731</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1460388950731</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -954,32 +883,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49618322" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32213742" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30229008" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3389313" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44885495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1002,11 +931,12 @@
     <MESSAGE value="imbalance test" />
     <MESSAGE value="Minute Aggregation" />
     <MESSAGE value="Initiated fair price" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiated fair price" />
+    <MESSAGE value="refactored with packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored with packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1015,69 +945,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/derby.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="11" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2925" column="25" selection-start-line="2925" selection-start-column="25" selection-end-line="2925" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/QuantitativeCheck.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/TradingSession.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/TradesQuotesCheck.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/GroupedDataset.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/PriceIncrement.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649635">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/quantifind/wisp_2.11/0.0.4/wisp_2.11-0.0.4.jar!/com/quantifind/charts/Highcharts.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.04">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/1.6.0/spark-sql_2.11-1.6.0.jar!/org/apache/spark/sql/GroupedData.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.84">
@@ -1152,15 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ParsingStructure/CSVparsing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1168,7 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,15 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19138756">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33492824">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7894737">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,25 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.023923445">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Checks/TradingParametersCheck.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28708133">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#15#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Checks/Returns.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.023923445">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16746412">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,39 +1065,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayMinuteData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119617224">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/Imbalance.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#19#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Checks/TradesQuoteChecks.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33173078">
           <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding>
-            <element signature="e#16#73#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.036057692">
           <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,15 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18518518">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,7 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18518518">
           <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,9 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18518518">
           <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#15#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1328,43 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14354067">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#16#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.023923445">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          <folding>
-            <element signature="e#21#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/DailyAggregation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119617224">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.023923445">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,17 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1390,32 +1125,218 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/PriceIncrement.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/MidImbalanceAux.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Checks/Returns.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.119617224">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Checks/TradingParametersCheck.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28708133">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023923445">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/ImbalanceManipulation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.119617224">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45454547">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-core_2.11/srcs/spark-core_2.11-1.6.0-sources.jar!/org/apache/spark/rdd/RDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="447" column="6" selection-start-line="447" selection-start-column="6" selection-end-line="447" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.11/1.6.0/spark-mllib_2.11-1.6.0.jar!/org/apache/spark/mllib/linalg/Vectors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.11/1.6.0/spark-mllib_2.11-1.6.0.jar!/org/apache/spark/mllib/regression/LinearRegressionWithSGD.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34313726">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayMinuteData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/DailyAggregation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/MinuteAggregationMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/NormalizedIntradayData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3153153">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/AggregateMinuteData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22522523">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/NumericAggregateMinuteData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3153153">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3153153">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="e#22#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegressionPlus.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="e#22#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/LinearRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8133971">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+          <folding>
+            <element signature="e#22#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/MinuteAggregation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="e#21#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MarketImpact/RegressionPlus.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/Imbalance.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ParsingStructure/CSVparsing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5855856">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/ModifiedNumericalKeyStamp.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27027026">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/FairPriceDataFrame.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="e#19#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/Example/Fair.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/FairPrice/MidPriceImbalance.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22222222">
-          <caret line="6" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3933934">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>

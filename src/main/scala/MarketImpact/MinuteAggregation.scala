@@ -2,6 +2,7 @@ package MarketImpact
 import ParsingStructure._
 
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.hive.HiveContext
 
 /**
@@ -15,7 +16,9 @@ case class MinuteAggregation(tradesFile: String) {
   import hive.implicits._
 
   lazy val minuteData: RDD[(String, Map[String, Iterable[TradesQuotesMinuteClass]])] =
-    tradesAndQuotes.map( k => k.dateString -> k).groupByKey().map{ case(day, trades) => day -> trades.groupBy(_.hour)}.persist()
+    tradesAndQuotes
+      .map( k => k.dateString -> k).groupByKey().map{ case(day, trades) => day -> trades.groupBy(_.hour)}
+      .persist()
       //.groupBy(_.dateString).map{ case(day, trades) => day -> trades.groupBy(_.hour)}.persist()
 
   lazy val tradedVolume =
@@ -97,7 +100,7 @@ case class MinuteAggregation(tradesFile: String) {
   }
 
 
-  def makeMinuteAggregateData() = {
+  def makeMinuteAggregateData(): Dataset[AggregateMinuteData] = {
 
     val volume = tradedVolume.toDF("dateString","hourV", "tradedVolume")
     val flow = tradeFlow.toDF("dateStringF", "hour", "tradeFlow")

@@ -1,6 +1,6 @@
 package MarketImpact
 
-import org.apache.spark.sql.{DataFrame, UserDefinedFunction}
+import org.apache.spark.sql.{Dataset, DataFrame, UserDefinedFunction}
 
 /**
   * Created by ceikit on 4/8/16.
@@ -14,7 +14,7 @@ case class NormalizedIntradayData(dailyAggregate: DailyAggregation){
   val dailyAggregateData: DataFrame = dailyAggregate.makeDailyAggregateData().toDF()
   val minuteAggregateData: DataFrame = dailyAggregate.minuteData.toDF()
 
-  def makeNormalizedIntradayDataSet () = {
+  def makeNormalizedIntradayDataSet (): Dataset[NormalizedIntradayMinuteData] = {
 
     //Traded volume percentage (1‐minute traded volume / daily volume)
     // Normalized volatility (square‐root of realized variance / daily volatility)
@@ -60,10 +60,11 @@ case class NormalizedIntradayData(dailyAggregate: DailyAggregation){
         r(9).asInstanceOf[Double])
       )
 
+    /*
     aggregate.toDF().coalesce(1).write
       .format("com.databricks.spark.csv")
       .option("header", "true")
-      .save("minuteAggregate.csv")
+      .save("minuteAggregate.csv")*/
 
 //    aggregate.map { c =>
 //        val date = c.dateString

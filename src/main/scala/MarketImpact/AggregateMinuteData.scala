@@ -10,3 +10,4 @@ case class AggregateMinuteData(dateString: String,
                                averageSpread: Double,
                                realizedVariance: Double,
                                returns: Double)
+
