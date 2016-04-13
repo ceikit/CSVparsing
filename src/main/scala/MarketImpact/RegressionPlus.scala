@@ -10,11 +10,10 @@ object RegressionPlus {
 
   def main(args: Array[String]): Unit = {
 
-    val fileNameChinese =  "sashastoikov@gmail.com_5020.T_tradesQuotes_20130103_20150909.csv"
+    val fileNameChinese =  "sashastoikov@gmail.com_9984.T_tradesQuotes_20130103_20150909.csv"
 
     val linearRegressionClass = LinearRegressionPlus(fileNameChinese)
 
-    val hive = linearRegressionClass.hiveCtx
 
     val splits = linearRegressionClass.tradeFlowFeature.randomSplit(Array(0.8,0.2))
 
@@ -26,7 +25,7 @@ object RegressionPlus {
 
 
     println(s"Training: $numTraining, test: $numTest.")
-    //readLine()
+    readLine()
 
     // Building the model
     val numIterations = 1000
@@ -92,7 +91,6 @@ object RegressionPlus {
     // Explained variance
     println(s"Explained variance = ${metricsLasso.explainedVariance}")
 
-    linearRegressionClass.sc.stop()
 
   }
 }

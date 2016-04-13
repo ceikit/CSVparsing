@@ -1,18 +1,16 @@
 package MarketImpact
 import ParsingStructure._
-
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.Dataset
-import org.apache.spark.sql.hive.HiveContext
 
 /**
   * Created by ceikit on 4/8/16.
   */
 case class MinuteAggregation(tradesFile: String) {
 
-
   lazy val tradesAndQuotes: RDD[TradesQuotesMinuteClass] = SparkCSVParsing.makeMinuteDataSet(tradesFile)
-  val hive = new HiveContext(SparkCSVParsing.sc)
+
+  val hive = SparkCSVParsing.hiveContext
   import hive.implicits._
 
   lazy val minuteData: RDD[(String, Map[String, Iterable[TradesQuotesMinuteClass]])] =
@@ -54,9 +52,6 @@ case class MinuteAggregation(tradesFile: String) {
     minuteData.foldLeft(0.0)((d,minute) => d + 2 * (minute.ask - minute.bid)/(minute.ask + minute.bid)) /
       minuteData.size.toDouble
 
-  def minuteToSecond(minuteData: Iterable[TradesQuotesMinuteClass]) : Map[Int, Iterable[TradesQuotesMinuteClass]] =
-    minuteData.groupBy(m => m.second.toInt)
-
 
   def secondVarianceOfReturn(secondData: Map[Int, Iterable[TradesQuotesMinuteClass]]) : Double = {
     val midPriceSecondMap: Array[(Double, Int)] =
@@ -80,6 +75,7 @@ case class MinuteAggregation(tradesFile: String) {
 
 
   def returnsMinute(hourData: Map[String, Iterable[TradesQuotesMinuteClass]]): Map[String, Double] = {
+
     val indexedData: Array[((String, Double), Int)] =
       hourData.mapValues(lastMinuteMidPrice)
         .toArray.sortBy(_._1)
@@ -93,6 +89,8 @@ case class MinuteAggregation(tradesFile: String) {
       }}.toMap
   }
 
+  def minuteToSecond(minuteData: Iterable[TradesQuotesMinuteClass]) : Map[Int, Iterable[TradesQuotesMinuteClass]] =
+    minuteData.groupBy(m => m.second.toInt)
 
   def lastMinuteMidPrice( minuteData: Iterable[TradesQuotesMinuteClass]) : Double = {
     val lastTrade = minuteToSecond(minuteData).maxBy(_._1)._2.maxBy(_.millisecond)
@@ -126,15 +124,5 @@ case class MinuteAggregation(tradesFile: String) {
       ).toDS()
 
 
-
-
-
-    //val ultimate1: RDD[((String, String), ((((Double, Double), Double), Double), Double))] =
-      //tradedVolume.join(tradeFlow).join(averageSpread).join(realizedVariance).join(returns)
-
-
-
-//      .map{case(s,v) =>
-//    AggregateMinuteData(s._1,s._2,v._1._1._1._1,v._1._1._1._2,v._1._1._2, v._1._2, v._2)}
   }
 }

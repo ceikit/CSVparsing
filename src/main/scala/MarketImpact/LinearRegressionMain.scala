@@ -28,7 +28,7 @@ object LinearRegressionMain {
 
 
     println(s"Training: $numTraining, test: $numTest.")
-    //readLine()
+    readLine()
 
     // Building the model
     val numIterations = 1000

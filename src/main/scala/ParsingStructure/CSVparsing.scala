@@ -1,6 +1,7 @@
 package ParsingStructure
 
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkConf, SparkContext}
 
 
@@ -8,6 +9,7 @@ object SparkCSVParsing {
 
   val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing").set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
   val sc = new SparkContext(conf)
+  val hiveContext = new HiveContext(SparkCSVParsing.sc)
 
   def makeTradesAndQuotesDataSet(fileName: String): RDD[(TQTimeKey, TradeAndQuote)] = {
 
