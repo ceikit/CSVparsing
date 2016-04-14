@@ -1,3 +1,5 @@
+package ParsingStructure
+
 
 abstract class BookInfo
 
@@ -41,13 +43,19 @@ case class TradesQuotesMinuteClass(dateString: String,
                              tradeSize: Double,
                              tradeSign: Int)
 
-case class AggregateMinuteData(dateString: String,
-                         hour: String,
-                         tradedVolume: Double,
-                         tradeFlow: Double,
-                         averageSpread: Double,
-                         realizedVariance: Double,
-                         returns: Double)
+case class TradesQuotesNumericalMinuteClass(date: Int,
+                                   hour: String,
+                                   second: Int,
+                                   millisecond: Int,
+                                   bid: Double,
+                                   bidSize: Double,
+                                   ask: Double,
+                                   askSize: Double,
+                                   tradePrice: Double,
+                                   tradeSize: Double,
+                                   tradeSign: Int)
+
+
 
 
   

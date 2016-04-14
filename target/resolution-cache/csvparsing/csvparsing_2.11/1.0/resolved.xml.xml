@@ -4,7 +4,7 @@
 		module="csvparsing_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160405133150"
+		publication="20160412125554"
 	>
 		<description>
 		CSVparsing
@@ -27,7 +27,9 @@
 	</configurations>
 	<publications>
 		<artifact name="csvparsing_2.11" type="pom" ext="pom" conf="pom"/>
-		<artifact name="csvparsing_2.11" type="jar" ext="jar" conf="optional" e:classifier="download, resolveClassifiers, resolveSbtClassifiers"/>
+		<artifact name="csvparsing_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="csvparsing_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="csvparsing_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" conf="scala-tool->default,optional(default)"/>
@@ -35,6 +37,7 @@
 		<dependency org="org.apache.spark" name="spark-core_2.11" rev="1.6.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="1.6.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-hive_2.10_2.11" rev="1.6.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-mllib_2.10" rev="1.6.0" conf="provided->default(compile)"/>
 		<dependency org="org.apache.poi" name="poi" rev="3.9" conf="compile->default(compile)"/>
 		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" conf="compile->default(compile)"/>
 		<dependency org="com.quantifind" name="wisp_2.11" rev="0.0.5" conf="compile->default(compile)"/>

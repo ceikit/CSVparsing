@@ -1,3 +1,5 @@
+package Example
+import Checks.DataCheckSingleAsset
 
 object DaysCheck {
 

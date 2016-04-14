@@ -1,3 +1,6 @@
+package Checks
+import ParsingStructure._
+
 import org.apache.spark.rdd.RDD
 
 

@@ -1,3 +1,6 @@
+package Checks
+
+import ParsingStructure.{Quote, TQDate, Trade, TQTimeKey}
 import org.apache.spark.rdd.RDD
 
 //////////////////////////////////////////////////

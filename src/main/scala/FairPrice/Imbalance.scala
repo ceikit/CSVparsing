@@ -1,3 +1,6 @@
+package FairPrice
+
+import ParsingStructure._
 import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.hive.HiveContext
 
