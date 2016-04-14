@@ -9,11 +9,11 @@ import scala.collection.mutable.ArrayBuffer
 
 case class FairPriceDataFrame(quoteFile: String) {
 
-  val hiveCtx = new HiveContext(ModifiedNumericalKeyStamp.sc)
+  val hiveCtx = new HiveContext(ModifiedNumericalKeyStampFair.sc)
   import hiveCtx.implicits._
 
   def quoteSet(): RDD[(NumericTime, Quote)] =
-    ModifiedNumericalKeyStamp.makeQuotesArray(quoteFile)
+    ModifiedNumericalKeyStampFair.makeQuotesArray(quoteFile)
       .map{case(k,v)=> NumericTime (k.numericDate,k.numericTime,k.numericSecond, k.numericMillisecond) -> v}
       .persist()
 

@@ -3,11 +3,13 @@ import ParsingStructure._
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkContext, SparkConf}
-object ModifiedNumericalKeyStamp {
+
+
+object ModifiedNumericalKeyStampFair {
 
   val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing").set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
   val sc = new SparkContext(conf)
-  val hiveContext = new HiveContext(SparkCSVParsing.sc)
+  val hiveContext = new HiveContext(sc)
 
   def makeTradesAndQuotesDataSet(fileName: String): RDD[(TQTimeKeyNumerical, TradeAndQuote)] = {
 
@@ -60,4 +62,28 @@ object ModifiedNumericalKeyStamp {
       .groupByKey().mapValues(_.last)
 
   }
+
+  def makeMinuteDataSet(fileName: String): RDD[TradesQuotesNumericalMinuteClass] = {
+
+    def secondToMinute(s: String) = {
+      val array = s.split(':')
+      array(0) + ':' + array(1)
+    }
+    def secondString(s: String) = s.split(':').last
+
+
+    makeTradesAndQuotesDataSet(fileName)
+      .map( t => {
+
+        val date = t._1.numericDate
+        val day = t._1.date.dayNumber.toString
+        val second = t._1.numericSecond
+        val millisecond = t._1.numericMillisecond
+        val time = t._1.timeStamp.time
+
+        TradesQuotesNumericalMinuteClass(date, secondToMinute(time), second,
+          millisecond, t._2.bid, t._2.bidSize, t._2.ask,
+          t._2.askSize, t._2.tradePrice, t._2.tradeSize, t._2.tradeSign)
+      } )}
+
 }

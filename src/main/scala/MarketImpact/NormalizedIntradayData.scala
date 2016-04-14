@@ -66,20 +66,6 @@ case class NormalizedIntradayData(dailyAggregate: DailyAggregation){
       .option("header", "true")
       .save("minuteAggregate.csv")*/
 
-//    aggregate.map { c =>
-//        val date = c.dateString
-//        val hour = c.hour
-//        val tradedVolume = c.tradedVolume
-//        val tradeFlow = c.tradeFlow
-//        val averageSpread = c.averageSpread
-//        val realizedVariance = c.realizedVariance
-//        val returns = c.returns
-//        val volumePercentage = c.volumePercentage
-//        val normalizedVolatility = c.normalizedVolatility
-//        val normalizedSpread = c.normalizedSpread
-//        s"$date, $hour, $tradedVolume, $tradeFlow, $averageSpread, $realizedVariance, $returns, $volumePercentage, $normalizedVolatility, $normalizedSpread"
-//      }.toDF().coalesce(1)
-//        .write.format("csv").save(dailyAggregate.minuteClass.tradesFile + "_MinuteAggregate")
 
     aggregate.toDS()
 

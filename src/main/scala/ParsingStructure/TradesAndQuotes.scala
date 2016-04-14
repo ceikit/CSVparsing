@@ -43,6 +43,18 @@ case class TradesQuotesMinuteClass(dateString: String,
                              tradeSize: Double,
                              tradeSign: Int)
 
+case class TradesQuotesNumericalMinuteClass(date: Int,
+                                   hour: String,
+                                   second: Int,
+                                   millisecond: Int,
+                                   bid: Double,
+                                   bidSize: Double,
+                                   ask: Double,
+                                   askSize: Double,
+                                   tradePrice: Double,
+                                   tradeSize: Double,
+                                   tradeSign: Int)
+
 
 
 

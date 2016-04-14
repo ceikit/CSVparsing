@@ -11,3 +11,17 @@ case class AggregateMinuteData(dateString: String,
                                realizedVariance: Double,
                                returns: Double)
 
+
+case class AggregateNumericalMinuteData(day: Int,
+                                        hour: String,
+                                        tradedVolume: Double,
+                                        tradeFlow: Double,
+                                        averageSpread: Double,
+                                        realizedVariance: Double,
+                                        returns: Double)
+
+case class AggregateNumericalMinuteAux(day: Int,
+                                        tradedVolume: Double,
+                                        averageSpread: Double,
+                                        realizedVariance: Double
+                                      )
