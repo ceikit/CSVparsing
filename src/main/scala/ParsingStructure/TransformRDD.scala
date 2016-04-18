@@ -21,7 +21,7 @@ object TransformRDD {
       .filter{case(key, value) => value > 0}
   }
 
-  def binnedDouble(n: Int, x: Double, array: Array[((Double, Double), Int)]) : (String, Int) = {
+  def binnedDouble( x: Double, array: Array[((Double, Double), Int)]) : (String, Int) = {
     val selectedBin =
       array.filter( p => p._1._1 <= x && x <= p._1._2)
     val headT = selectedBin.head

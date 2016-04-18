@@ -2,8 +2,6 @@ package MarketImpact
 
 import java.io.File
 
-import org.apache.spark.rdd.RDD
-
 
 object MultipleStocksRegression {
 
@@ -22,27 +20,28 @@ object MultipleStocksRegression {
 
   def main(args: Array[String]): Unit = {
 
-    val exchangeFilesPath = "/Users/ceikit/sda/download/NIKKEI"
+    val exchangeFilesPath = "/Users/ceikit/Development/Scala/CSVparsing2/minuteNumericAggregate"
 
     val filesList: List[String] =
       getListOfSubDirectories(exchangeFilesPath)
         .flatMap(
-          v => getListOfSubDirectories(exchangeFilesPath + "/" + v)
+          v => getListOfFiles(exchangeFilesPath + "/" + v)
           .map(s => exchangeFilesPath + "/" + v + "/" + s)
-        ).dropRight(1).toList
-        .flatMap(f => getListOfFiles(f)
-        .filter(_.endsWith(".gz")).map(v => f + "/" + v)
-      )
+        )
+        .filter(_.endsWith("0")).toList
+
 
     filesList.foreach(v => println(v))
 
+
+
     val regression = (v: String) => RegressionAnalysis.regressionResult(v)
 
-    val filesRDD: RDD[String] = RegressionAnalysis.sc.parallelize(filesList)
+    val filesRDD = RegressionAnalysis.sc.parallelize(filesList).zipWithIndex()
 
     import ParsingStructure.SparkCSVParsing.hiveContext.implicits._
 
-    val regressionResult  = filesRDD.map(v => regression(v)).toDF()
+    val regressionResult  = filesRDD.map(v => {println(v._2 + " " + v._1);regression(v._1)}).toDF()
 
      regressionResult.coalesce(1).write
       .format("com.databricks.spark.csv")

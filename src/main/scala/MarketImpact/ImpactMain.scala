@@ -17,7 +17,7 @@ object ImpactMain {
       .sortBy(k => (k.day,k.hour))
 
 
-    lazy val volumeHist = minuteData.map(_.returns).histogram(100)
+     val volumeHist = minuteData.map(_.returns).histogram(100)
     //histogram(volumeHist._1.zip(volumeHist._2).toList)
     //line(minuteData.map(k => (k.day, k.hour, k.realizedVariance)).sortBy(v => (v._1,v._2, v._3)).collect().toList.map(_._3))
 

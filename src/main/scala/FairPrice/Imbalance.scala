@@ -25,7 +25,7 @@ object Imbalance {
   lazy val coder: (Double, Double, Array[((Double, Double), Int)]) => Int =
     (bidSize: Double, askSize: Double, array: Array[((Double, Double), Int)]) => {
     val imbalance = bidSize/(bidSize + askSize)
-    TransformRDD.binnedDouble(500, imbalance, array)._2
+    TransformRDD.binnedDouble(imbalance, array)._2
   }
 
   def makeVolumeImbalance(data: Dataset[TradesQuotesClass], tradeSign: Int, n: Int): Dataset[(Int, Long)] = {
