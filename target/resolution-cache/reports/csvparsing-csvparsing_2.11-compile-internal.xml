@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160414165312"/>
+		date="20160418171343"/>
 	<dependencies>
 		<module organisation="org.apache.spark" name="spark-mllib_2.10">
 			<revision name="1.6.0" status="release" pubdate="20151230070046" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="168">
@@ -770,7 +770,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_system-win-i686">
 			<revision name="1.1" status="release" pubdate="20131011184100" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="159">
-				<metadata-artifact status="successful" details="" size="5271" time="295" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="5271" time="273" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_system-win-i686" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="561459" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/jars/netlib-native_system-win-i686-1.1-natives.jar">
@@ -792,7 +792,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_system-linux-armhf">
 			<revision name="1.1" status="release" pubdate="20131011193100" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="157">
-				<metadata-artifact status="successful" details="" size="4780" time="326" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-armhf/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-armhf/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="4780" time="293" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-armhf/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-armhf/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_system-linux-armhf" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="310891" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-armhf/jars/netlib-native_system-linux-armhf-1.1-natives.jar">
@@ -803,7 +803,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_system-linux-i686">
 			<revision name="1.1" status="release" pubdate="20131011193000" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="156">
-				<metadata-artifact status="successful" details="" size="4869" time="294" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="4869" time="277" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_system-linux-i686" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="435365" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-i686/jars/netlib-native_system-linux-i686-1.1-natives.jar">
@@ -814,7 +814,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_system-linux-x86_64">
 			<revision name="1.1" status="release" pubdate="20131011192900" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="155">
-				<metadata-artifact status="successful" details="" size="3930" time="297" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3930" time="290" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_system-linux-x86_64" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="458605" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-linux-x86_64/jars/netlib-native_system-linux-x86_64-1.1-natives.jar">
@@ -825,7 +825,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_system-osx-x86_64">
 			<revision name="1.1" status="release" pubdate="20131011184000" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="153">
-				<metadata-artifact status="successful" details="" size="3912" time="296" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-osx-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-osx-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3912" time="280" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-osx-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-osx-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_system-osx-x86_64" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="553993" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-osx-x86_64/jars/netlib-native_system-osx-x86_64-1.1-natives.jar">
@@ -836,7 +836,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="native_system-java">
 			<revision name="1.1" status="release" pubdate="20131011183900" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="154">
-				<metadata-artifact status="successful" details="" size="3988" time="296" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_system-java/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_system-java/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3988" time="284" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_system-java/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_system-java/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_system-linux-x86_64" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_system-win-i686" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_system-linux-i686" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
@@ -852,7 +852,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-linux-armhf">
 			<revision name="1.1" status="release" pubdate="20131011191600" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="152">
-				<metadata-artifact status="successful" details="" size="3897" time="299" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-armhf/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-armhf/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3897" time="284" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-armhf/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-armhf/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-linux-armhf" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="1208080" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-armhf/jars/netlib-native_ref-linux-armhf-1.1-natives.jar">
@@ -863,7 +863,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-win-i686">
 			<revision name="1.1" status="release" pubdate="20131011183700" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="151">
-				<metadata-artifact status="successful" details="" size="4471" time="301" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="4471" time="292" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-win-i686" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="1826785" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-i686/jars/netlib-native_ref-win-i686-1.1-natives.jar">
@@ -874,7 +874,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-win-x86_64">
 			<revision name="1.1" status="release" pubdate="20131011183900" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="150">
-				<metadata-artifact status="successful" details="" size="4378" time="301" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="4378" time="281" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-win-x86_64" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="2305169" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-win-x86_64/jars/netlib-native_ref-win-x86_64-1.1-natives.jar">
@@ -885,7 +885,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-linux-i686">
 			<revision name="1.1" status="release" pubdate="20131011191400" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="149">
-				<metadata-artifact status="successful" details="" size="3739" time="295" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3739" time="302" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-i686/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-i686/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-linux-i686" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="1489507" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-i686/jars/netlib-native_ref-linux-i686-1.1-natives.jar">
@@ -896,7 +896,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-linux-x86_64">
 			<revision name="1.1" status="release" pubdate="20131011191300" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="148">
-				<metadata-artifact status="successful" details="" size="3309" time="328" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3309" time="285" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-linux-x86_64" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="1749371" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-linux-x86_64/jars/netlib-native_ref-linux-x86_64-1.1-natives.jar">
@@ -907,7 +907,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="netlib-native_ref-osx-x86_64">
 			<revision name="1.1" status="release" pubdate="20131011183500" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="145">
-				<metadata-artifact status="successful" details="" size="3620" time="303" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3620" time="260" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="all" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1.2"/>
 				<artifacts>
 					<artifact name="netlib-native_ref-osx-x86_64" type="jar" ext="jar" extra-classifier="natives" status="no" details="" size="1839499" time="0" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/jars/netlib-native_ref-osx-x86_64-1.1-natives.jar">
@@ -918,7 +918,7 @@
 		</module>
 		<module organisation="com.github.fommil.netlib" name="native_ref-java">
 			<revision name="1.1" status="release" pubdate="20131011183400" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="146">
-				<metadata-artifact status="successful" details="" size="3973" time="321" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_ref-java/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_ref-java/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3973" time="294" location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_ref-java/ivy-1.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/com.github.fommil.netlib/native_ref-java/ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_ref-linux-armhf" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_ref-osx-x86_64" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
 				<caller organisation="com.github.fommil.netlib" name="netlib-native_ref-win-i686" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.1"/>
@@ -1142,7 +1142,7 @@
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
 			<revision name="1.5" status="release" pubdate="20110324213405" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/codec/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="127">
-				<metadata-artifact status="successful" details="" size="10213" time="296" location="/Users/ceikit/.ivy2/cache/commons-codec/commons-codec/ivy-1.5.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-codec/commons-codec/ivy-1.5.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-codec/commons-codec/1.5/commons-codec-1.5.pom"/>
+				<metadata-artifact status="successful" details="" size="10213" time="285" location="/Users/ceikit/.ivy2/cache/commons-codec/commons-codec/ivy-1.5.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-codec/commons-codec/ivy-1.5.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-codec/commons-codec/1.5/commons-codec-1.5.pom"/>
 				<caller organisation="org.apache.parquet" name="parquet-encoding" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="1.7.0"/>
 				<caller organisation="net.java.dev.jets3t" name="jets3t" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="0.7.1"/>
 				<caller organisation="org.apache.parquet" name="parquet-column" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="1.7.0"/>
@@ -1306,7 +1306,7 @@
 		<module organisation="net.razorvine" name="pyrolite">
 			<revision name="4.9" status="release" pubdate="20150807030134" resolver="jcenter" artresolver="jcenter" homepage="https://github.com/irmen/Pyrolite" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="115">
 				<license name="MIT License" url="https://raw.githubusercontent.com/irmen/Pyrolite/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="3498" time="294" location="/Users/ceikit/.ivy2/cache/net.razorvine/pyrolite/ivy-4.9.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/net.razorvine/pyrolite/ivy-4.9.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/net/razorvine/pyrolite/4.9/pyrolite-4.9.pom"/>
+				<metadata-artifact status="successful" details="" size="3498" time="282" location="/Users/ceikit/.ivy2/cache/net.razorvine/pyrolite/ivy-4.9.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/net.razorvine/pyrolite/ivy-4.9.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/net/razorvine/pyrolite/4.9/pyrolite-4.9.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.10" conf="compile, runtime" rev="4.9" rev-constraint-default="4.9" rev-constraint-dynamic="4.9" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="4.9" rev-constraint-default="4.9" rev-constraint-dynamic="4.9" callerrev="1.6.0"/>
 				<artifacts>
@@ -1507,7 +1507,7 @@
 		</module>
 		<module organisation="org.apache.commons" name="commons-lang3">
 			<revision name="3.0" status="release" pubdate="20110718233605" resolver="jcenter" artresolver="jcenter" evicted="latest-revision" evicted-reason="" homepage="http://commons.apache.org/lang/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
-				<metadata-artifact status="successful" details="" size="17659" time="352" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.pom"/>
+				<metadata-artifact status="successful" details="" size="17659" time="344" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.pom"/>
 				<evicted-by rev="3.3.2"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.6.0"/>
 				<caller organisation="org.tachyonproject" name="tachyon-underfs-hdfs" conf="compile, runtime" rev="3.0" rev-constraint-default="3.0" rev-constraint-dynamic="3.0" callerrev="0.8.2"/>
@@ -1516,7 +1516,7 @@
 				</artifacts>
 			</revision>
 			<revision name="3.3.2" status="release" pubdate="20140406082100" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="75">
-				<metadata-artifact status="successful" details="" size="20377" time="353" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.pom"/>
+				<metadata-artifact status="successful" details="" size="20377" time="337" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.10" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.6.0"/>
 				<caller organisation="org.tachyonproject" name="tachyon-underfs-hdfs" conf="compile, runtime" rev="3.0" rev-constraint-default="3.0" rev-constraint-dynamic="3.0" callerrev="0.8.2"/>
@@ -1833,7 +1833,7 @@
 		</module>
 		<module organisation="commons-net" name="commons-net">
 			<revision name="2.2" status="release" pubdate="20101116195514" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/net/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="85">
-				<metadata-artifact status="successful" details="" size="12675" time="296" location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-2.2.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-2.2.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-net/commons-net/2.2/commons-net-2.2.pom"/>
+				<metadata-artifact status="successful" details="" size="12675" time="282" location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-2.2.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-2.2.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-net/commons-net/2.2/commons-net-2.2.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="2.2.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.10" conf="compile, runtime" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="1.6.0"/>
@@ -1844,7 +1844,7 @@
 				</artifacts>
 			</revision>
 			<revision name="3.1" status="release" pubdate="20120214134228" resolver="jcenter" artresolver="jcenter" evicted="latest-revision" evicted-reason="" homepage="http://commons.apache.org/net/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
-				<metadata-artifact status="successful" details="" size="18417" time="367" location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-net/commons-net/3.1/commons-net-3.1.pom"/>
+				<metadata-artifact status="successful" details="" size="18417" time="336" location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-net/commons-net/3.1/commons-net-3.1.pom"/>
 				<evicted-by rev="2.2"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="2.2.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="2.2" callerrev="1.6.0"/>
@@ -1935,7 +1935,7 @@
 		</module>
 		<module organisation="org.apache.commons" name="commons-math3">
 			<revision name="3.4.1" status="release" pubdate="20150108122800" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/proper/commons-math/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="76">
-				<metadata-artifact status="successful" details="" size="27190" time="355" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.4.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.4.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.pom"/>
+				<metadata-artifact status="successful" details="" size="27190" time="342" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.4.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.4.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.10" conf="compile, runtime" rev="3.4.1" rev-constraint-default="3.4.1" rev-constraint-dynamic="3.4.1" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="3.4.1" rev-constraint-default="3.4.1" rev-constraint-dynamic="3.4.1" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-mllib_2.10" conf="default, compile, runtime, master" rev="3.4.1" rev-constraint-default="3.4.1" rev-constraint-dynamic="3.4.1" callerrev="1.6.0"/>
@@ -2043,7 +2043,7 @@
 				</artifacts>
 			</revision>
 			<revision name="2.1" status="release" pubdate="20111003173236" resolver="jcenter" artresolver="jcenter" evicted="latest-revision" evicted-reason="" homepage="http://commons.apache.org/io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
-				<metadata-artifact status="successful" details="" size="10636" time="328" location="/Users/ceikit/.ivy2/cache/commons-io/commons-io/ivy-2.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-io/commons-io/ivy-2.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-io/commons-io/2.1/commons-io-2.1.pom"/>
+				<metadata-artifact status="successful" details="" size="10636" time="277" location="/Users/ceikit/.ivy2/cache/commons-io/commons-io/ivy-2.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/commons-io/commons-io/ivy-2.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-io/commons-io/2.1/commons-io-2.1.pom"/>
 				<evicted-by rev="2.4"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-api" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-client" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="2.2.0"/>
@@ -2168,7 +2168,7 @@
 		</module>
 		<module organisation="io.netty" name="netty-all">
 			<revision name="4.0.29.Final" status="release" pubdate="20150623054400" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="60">
-				<metadata-artifact status="successful" details="" size="17490" time="349" location="/Users/ceikit/.ivy2/cache/io.netty/netty-all/ivy-4.0.29.Final.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/io.netty/netty-all/ivy-4.0.29.Final.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/netty/netty-all/4.0.29.Final/netty-all-4.0.29.Final.pom"/>
+				<metadata-artifact status="successful" details="" size="17490" time="338" location="/Users/ceikit/.ivy2/cache/io.netty/netty-all/ivy-4.0.29.Final.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/io.netty/netty-all/ivy-4.0.29.Final.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/netty/netty-all/4.0.29.Final/netty-all-4.0.29.Final.pom"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.10" conf="compile, runtime" rev="4.0.29.Final" rev-constraint-default="4.0.29.Final" rev-constraint-dynamic="4.0.29.Final" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="4.0.29.Final" rev-constraint-default="4.0.29.Final" rev-constraint-dynamic="4.0.29.Final" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-network-common_2.11" conf="compile, runtime" rev="4.0.29.Final" rev-constraint-default="4.0.29.Final" rev-constraint-dynamic="4.0.29.Final" callerrev="1.6.0"/>
@@ -2194,7 +2194,7 @@
 		<module organisation="org.spark-project.spark" name="unused">
 			<revision name="1.0.0" status="release" pubdate="20141022030000" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="58">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="2356" time="324" location="/Users/ceikit/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
+				<metadata-artifact status="successful" details="" size="2356" time="279" location="/Users/ceikit/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
 				<caller organisation="org.apache.spark" name="spark-sql_2.11" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-catalyst_2.10" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.6.0"/>
 				<caller organisation="org.apache.spark" name="spark-graphx_2.10" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.6.0"/>
@@ -2295,8 +2295,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-mapreduce-client-jobclient">
-			<revision name="2.2.0" status="release" pubdate="20131007023723" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="56">
-				<metadata-artifact status="successful" details="" size="5474" time="294" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.2.0/hadoop-mapreduce-client-jobclient-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023723" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="56">
+				<metadata-artifact status="no" details="" size="30083" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.2.0/hadoop-mapreduce-client-jobclient-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
 					<artifact name="hadoop-mapreduce-client-jobclient" type="jar" ext="jar" status="no" details="" size="35216" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/jars/hadoop-mapreduce-client-jobclient-2.2.0.jar">
@@ -2306,8 +2306,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-mapreduce-client-app">
-			<revision name="2.2.0" status="release" pubdate="20131007023711" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="35">
-				<metadata-artifact status="successful" details="" size="4335" time="316" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-app/2.2.0/hadoop-mapreduce-client-app-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023711" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="35">
+				<metadata-artifact status="no" details="" size="29345" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-app/2.2.0/hadoop-mapreduce-client-app-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
 					<artifact name="hadoop-mapreduce-client-app" type="jar" ext="jar" status="no" details="" size="482042" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/jars/hadoop-mapreduce-client-app-2.2.0.jar">
@@ -2317,8 +2317,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-mapreduce-client-shuffle">
-			<revision name="2.2.0" status="release" pubdate="20131007023703" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="55">
-				<metadata-artifact status="successful" details="" size="1675" time="295" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.2.0/hadoop-mapreduce-client-shuffle-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023703" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
+				<metadata-artifact status="successful" details="" size="1675" time="316" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.2.0/hadoop-mapreduce-client-shuffle-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-jobclient" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-app" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
@@ -2330,15 +2330,15 @@
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-yarn-server-nodemanager">
 			<revision name="2.2.0" status="release" pubdate="20131007023538" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*)" position="117">
-				<metadata-artifact status="successful" details="" size="7324" time="304" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-server-nodemanager/2.2.0/hadoop-yarn-server-nodemanager-2.2.0.pom"/>
+				<metadata-artifact status="successful" details="" size="7324" time="287" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-server-nodemanager/2.2.0/hadoop-yarn-server-nodemanager-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-shuffle" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common">
-			<revision name="2.2.0" status="release" pubdate="20131007023659" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="36">
-				<metadata-artifact status="successful" details="" size="3273" time="302" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-common/2.2.0/hadoop-mapreduce-client-common-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023659" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+				<metadata-artifact status="successful" details="" size="3273" time="296" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-common/2.2.0/hadoop-mapreduce-client-common-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-jobclient" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-app" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
@@ -2349,8 +2349,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-yarn-server-common">
-			<revision name="2.2.0" status="release" pubdate="20131007023526" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="54">
-				<metadata-artifact status="successful" details="" size="3534" time="336" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-server-common/2.2.0/hadoop-yarn-server-common-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023526" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="54">
+				<metadata-artifact status="no" details="" size="30836" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-server-common/2.2.0/hadoop-yarn-server-common-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-server-nodemanager" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
@@ -2361,8 +2361,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-mapreduce-client-core">
-			<revision name="2.2.0" status="release" pubdate="20131007023626" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="53">
-				<metadata-artifact status="successful" details="" size="3085" time="982" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-core/2.2.0/hadoop-mapreduce-client-core-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023626" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="53">
+				<metadata-artifact status="no" details="" size="28252" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-mapreduce-client-core/2.2.0/hadoop-mapreduce-client-core-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-shuffle" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
@@ -2374,8 +2374,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-yarn-client">
-			<revision name="2.2.0" status="release" pubdate="20131007023604" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="52">
-				<metadata-artifact status="successful" details="" size="1961" time="299" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-client/2.2.0/hadoop-yarn-client-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023604" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="52">
+				<metadata-artifact status="no" details="" size="28329" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-client/2.2.0/hadoop-yarn-client-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<artifacts>
 					<artifact name="hadoop-yarn-client" type="jar" ext="jar" status="no" details="" size="94728" time="0" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/jars/hadoop-yarn-client-2.2.0.jar">
@@ -2385,8 +2385,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-yarn-common">
-			<revision name="2.2.0" status="release" pubdate="20131007023515" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="37">
-				<metadata-artifact status="successful" details="" size="5032" time="306" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-common/2.2.0/hadoop-yarn-common-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023515" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+				<metadata-artifact status="successful" details="" size="5032" time="284" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-common/2.2.0/hadoop-yarn-common-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-core" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-server-common" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
@@ -2399,8 +2399,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-yarn-api">
-			<revision name="2.2.0" status="release" pubdate="20131007023452" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="38">
-				<metadata-artifact status="successful" details="" size="2956" time="310" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-api/2.2.0/hadoop-yarn-api-2.2.0.pom"/>
+			<revision name="2.2.0" status="release" pubdate="20131007023452" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+				<metadata-artifact status="successful" details="" size="2956" time="291" location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/ivy-2.2.0.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/hadoop/hadoop-yarn-api/2.2.0/hadoop-yarn-api-2.2.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-yarn-common" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-client" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="2.2.0"/>
@@ -3044,7 +3044,7 @@
 		</module>
 		<module organisation="org.apache.commons" name="commons-compress">
 			<revision name="1.4.1" status="release" pubdate="20120522005724" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/compress/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
-				<metadata-artifact status="successful" details="" size="10755" time="315" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
+				<metadata-artifact status="successful" details="" size="10755" time="283" location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="true" original-local-location="/Users/ceikit/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
 				<caller organisation="org.apache.avro" name="avro" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="1.7.7"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="2.2.0"/>
 				<artifacts>

@@ -42,33 +42,56 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
     val dfA: RDD[MidImbalanceAux] =
       quoteSet.map(function).map(f => MidImbalanceAux(f._1, f._2, f._3, f._4, f._5, f._6))
 
-    val fairDataFrame =
+    val fairDataFrame: RDD[(Int, FairDataFrame)] =
       dfA.map(v => v.date -> v).groupByKey()
         .flatMapValues( ls => {
           ls.map(x =>
-            x -> (1 to numberOfLater)
+            x -> (1 to numberOfLater).toArray
               .map(i => {
-                val delay = dt._1 * i
-                val delayed: (Double ,Option[Double] ) = {
                   val filtered =
-                    ls.filter(y =>  y.time <= x.time + dt._1 * i && y.time >= x.time + dt._1 * (i-1) )
-                  filtered.isEmpty match {
+                    ls.filter(y =>  y.time <= x.time + dt._1 * i  )//&& y.time >= x.time + dt._1 * (i-1)
+
+                   filtered.isEmpty match {
                     case false =>
                       val value = filtered.maxBy(_.time)
                       value.time -> Some(value.mid)
-                    case true => x.time + delay -> None
+                    case true => x.time + dt._1 * i -> None
                   }
-                }
-                delayed
-              }).toArray
+              })
           )
         })
-        .mapValues( f =>
-          FairDataFrame(f._1.date, f._1.time, f._1.second, f._1.milliSec, f._1.mid, f._1.binImbalance, f._2)
-        ).values
+        .map{ case(k,f) =>
+          f._1.binImbalance ->
+            FairDataFrame(f._1.date, f._1.time, f._1.second, f._1.milliSec, f._1.mid, f._1.binImbalance, f._2)
+        }
 
     fairDataFrame
 
+
+  }
+
+
+  def conditionalExpectedValue(fairPriceDataFrame:  RDD[(Int, FairDataFrame)],numberOfLater: Int): RDD[(Int, Array[Double])] = {
+
+    def combOp( iXs: (Int, Array[Double]), jYs: (Int,Array[Double])): (Int, Array[Double]) = {
+
+      (iXs._1 + jYs._1) ->  iXs._2.zip(jYs._2).map(q => q._1 + q._2)
+    }
+
+    def seqOp(iXs: (Int, Array[Double]), y : FairDataFrame) : (Int,Array[Double]) = {
+
+      val start: Array[Double] = y.laterMids.map{case(t, mid) =>
+        mid match {
+          case Some(m) => m - y.mid
+          case None => 0.0
+        }
+      }
+
+      (iXs._1 + 1) -> start.zip(iXs._2).map(q => q._1 + q._2)
+    }
+
+    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toArray.map(v =>  0.0))(seqOp, combOp)
+      .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
 
   }
 }

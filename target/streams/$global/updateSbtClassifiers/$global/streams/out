@@ -32,6 +32,7 @@
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#main;0.13.5 [compile->default(compile)]
 [info] Resolving org.scala-sbt#main;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#main;0.13.5 {compile=[default(compile)]}
+[debug] no default cache defined: set to /Users/ceikit/.ivy2/cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#main;0.13.5
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#main;0.13.5
 [debug] 	found org.scala-sbt#main;0.13.5 in sbt-chain
@@ -612,9 +613,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 308ms :: artifacts dl 11ms
+[debug] :: resolution report :: resolve 356ms :: artifacts dl 15ms
 [debug] 	report for csvparsing#csvparsing$sbt_2.11;1.0 default produced in /Users/ceikit/Development/Scala/CSVparsing2/target/resolution-cache/reports/csvparsing-csvparsing$sbt_2.11-default.xml
-[debug] 	resolve done (308ms resolve - 11ms download)
+[debug] 	resolve done (356ms resolve - 15ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: csvparsing#csvparsing$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -956,6 +957,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 80ms :: artifacts dl 11ms
+[debug] :: resolution report :: resolve 57ms :: artifacts dl 9ms
 [debug] 	report for csvparsing#csvparsing$sources_2.11;1.0 default produced in /Users/ceikit/Development/Scala/CSVparsing2/target/resolution-cache/reports/csvparsing-csvparsing$sources_2.11-default.xml
-[debug] 	resolve done (80ms resolve - 11ms download)
+[debug] 	resolve done (57ms resolve - 9ms download)

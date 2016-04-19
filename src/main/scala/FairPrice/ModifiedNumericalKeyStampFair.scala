@@ -7,7 +7,12 @@ import org.apache.spark.{SparkContext, SparkConf}
 
 object ModifiedNumericalKeyStampFair {
 
-  val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing").set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
+  val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing")//.set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
+
+  conf.registerKryoClasses(
+    Array(classOf[TQTimeKeyNumerical], classOf[TradeAndQuote], classOf[Quote], classOf[FairDataFrame])
+  )
+
   val sc = new SparkContext(conf)
   val hiveContext = new HiveContext(sc)
 
@@ -57,9 +62,10 @@ object ModifiedNumericalKeyStampFair {
       TQTimeKeyNumerical(numericDate,g(1).toDouble,numericSecond,numericMillisecond,date, timeStamp) ->
         Quote(bid, bidSize, ask, askSize)
     })
-      .filter{case (key, quote) => quote.ask > 0 && quote.bid > 0}
+      .filter{quote => quote._2.ask > 0 && quote._2.bid > 0}
       .filter( q => q._2.bidSize > 0 && q._2.askSize > 0 )
-      .groupByKey().mapValues(_.last)
+      .filter(v => v._1.numericDate < 41311 )
+      //.groupByKey().mapValues(_.last)
 
   }
 
