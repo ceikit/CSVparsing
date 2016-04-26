@@ -4,7 +4,7 @@
 		module="csvparsing$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160418171414"
+		publication="20160421180652"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

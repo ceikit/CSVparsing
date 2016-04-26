@@ -2,7 +2,7 @@ package FairPrice
 import ParsingStructure._
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.hive.HiveContext
-import org.apache.spark.{SparkContext, SparkConf}
+import org.apache.spark.{SparkConf, SparkContext}
 
 
 object ModifiedNumericalKeyStampFair {
@@ -64,7 +64,7 @@ object ModifiedNumericalKeyStampFair {
     })
       .filter{quote => quote._2.ask > 0 && quote._2.bid > 0}
       .filter( q => q._2.bidSize > 0 && q._2.askSize > 0 )
-      .filter(v => v._1.numericDate < 41311 )
+      .filter(v => v._1.numericDate == 41311)// || v._1.numericDate == 41310 || v._1.numericDate == 41309 )
       //.groupByKey().mapValues(_.last)
 
   }

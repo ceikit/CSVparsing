@@ -29,23 +29,17 @@ object Imbalance {
   }
 
   def makeVolumeImbalance(data: Dataset[TradesQuotesClass], tradeSign: Int, n: Int): Dataset[(Int, Long)] = {
-    def binSize(n: Int): Double = 1/n.toDouble
-    def binList(n: Int): Array[(Double, Double)] =
-      (1 to n+1)
-        .foldLeft( ArrayBuffer[(Double,Double)]() )((list, num) => list :+ ((num-1) * binSize(n), num * binSize(n)) )
-        .toArray
 
-    val listOfBins: Array[((Double, Double), Int)] = binList(n).zipWithIndex
-
+    val binList = ImbalanceUtilities.listOfBins(n)
     tradeSign match {
       case -1 => data
         .filter(_.tradeSign == tradeSign)
-        .map( q => coder(q.bidSize,q.askSize,listOfBins) -> q.tradeSize )
+        .map( q => coder(q.bidSize,q.askSize,binList) -> q.tradeSize )
         .groupBy( _._1).count()//.reduce((x,y) => x._1 -> (x._2 + y._2))
       //.map(_._2)
       case 1 => data
         .filter(_.tradeSign == tradeSign)
-        .map( q => coder(q.bidSize,q.askSize,listOfBins) -> q.tradeSize )
+        .map( q => coder(q.bidSize,q.askSize,binList) -> q.tradeSize )
         .groupBy( _._1).count()//.reduce((x,y) => x._1 -> (x._2 + y._2))
       //.map(_._2)
     }
@@ -66,4 +60,18 @@ object Imbalance {
 
 
 
+
+
+}
+
+
+object ImbalanceUtilities {
+
+  def binSize(n: Int): Double = 1/n.toDouble
+  def binList(n: Int): Array[(Double, Double)] =
+    (1 to n+1)
+      .foldLeft( ArrayBuffer[(Double,Double)]() )((list, num) => list :+ ((num-1) * binSize(n), num * binSize(n)) )
+      .toArray
+
+  val listOfBins = (n:Int) => binList(n).zipWithIndex
 }

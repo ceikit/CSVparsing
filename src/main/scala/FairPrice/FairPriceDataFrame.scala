@@ -14,64 +14,65 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
   def quoteSet: RDD[(NumericTime, Quote)] =
     ModifiedNumericalKeyStampFair.makeQuotesArray(quoteFile)
       .map { case (k, v) => NumericTime(k.numericDate, k.numericTime, k.numericSecond, k.numericMillisecond) -> v }
+      .persist()
 
 
-  def makeMidPriceLater(numberOfBins: Int, dt: (Int, Int), numberOfLater: Int) = {
-
-    def binSize(n: Int): Double = 1 / n.toDouble
-    def binList(n: Int): Array[(Double, Double)] =
-      (1 to n + 1)
-        .foldLeft(ArrayBuffer[(Double, Double)]())((list, num) => list :+((num - 1) * binSize(n), num * binSize(n)))
-        .toArray
+  def makeMidPriceLater(numberOfBins: Int, delays: Array[Double]) = {
 
     def imbalance(quote: Quote, array: Array[((Double, Double), Int)]): Int = {
       val imbalance = quote.bidSize / (quote.bidSize + quote.askSize)
       TransformRDD.binnedDouble(imbalance, array)._2
     }
 
-    val listOfBins: Array[((Double, Double), Int)] = binList(numberOfBins).zipWithIndex
+    val listOfBins = ImbalanceUtilities.listOfBins(numberOfBins)
 
 
-    val function: ((NumericTime, Quote)) => (Int, Double, Int, Int, Double, Int) = (q: (NumericTime, Quote)) =>
-      (q._1.numericDate, q._1.numericTime,
-        q._1.numericSecond,
-        q._1.numericMillisecond,
-        (q._2.ask + q._2.bid) / 2,
-        imbalance(q._2, listOfBins))
+    val function: ((NumericTime, Quote)) => (Int, Double, Int, Int, Double, Int) =
+      (q: (NumericTime, Quote)) =>
+        (q._1.numericDate, q._1.numericTime,
+          q._1.numericSecond,
+          q._1.numericMillisecond,
+          (q._2.ask + q._2.bid) / 2,
+          imbalance(q._2, listOfBins))
 
     val dfA: RDD[MidImbalanceAux] =
       quoteSet.map(function).map(f => MidImbalanceAux(f._1, f._2, f._3, f._4, f._5, f._6))
 
     val fairDataFrame: RDD[(Int, FairDataFrame)] =
       dfA.map(v => v.date -> v).groupByKey()
-        .flatMapValues( ls => {
-          ls.map(x =>
-            x -> (1 to numberOfLater).toArray
-              .map(i => {
-                  val filtered =
-                    ls.filter(y =>  y.time <= x.time + dt._1 * i  )//&& y.time >= x.time + dt._1 * (i-1)
+        .flatMap{
+          case (date,ls) =>
+            ls.map(x =>
+              x ->
+                delays
+                  .map(
+                    delay =>
+                    {
+                      val filtered =
+                        ls.filter(y =>  y.time <= x.time + delay  )//&& y.time >= x.time + dt._1 * (i-1)
 
-                   filtered.isEmpty match {
-                    case false =>
-                      val value = filtered.maxBy(_.time)
-                      value.time -> Some(value.mid)
-                    case true => x.time + dt._1 * i -> None
-                  }
-              })
-          )
-        })
-        .map{ case(k,f) =>
+                      filtered.isEmpty match {
+                        case false =>
+                          val value = filtered.maxBy(_.time)
+                          value.time -> Some(value.binImbalance -> value.mid)
+                        case true => x.time + delay -> None
+                      }
+                    }
+                  )
+            )
+        }
+        .map( f =>
           f._1.binImbalance ->
             FairDataFrame(f._1.date, f._1.time, f._1.second, f._1.milliSec, f._1.mid, f._1.binImbalance, f._2)
-        }
+        )
 
     fairDataFrame
-
 
   }
 
 
-  def conditionalExpectedValue(fairPriceDataFrame:  RDD[(Int, FairDataFrame)],numberOfLater: Int): RDD[(Int, Array[Double])] = {
+
+  def g1(fairPriceDataFrame:  RDD[(Int, FairDataFrame)], numberOfLater: Int): RDD[(Int, Array[Double])] = {
 
     def combOp( iXs: (Int, Array[Double]), jYs: (Int,Array[Double])): (Int, Array[Double]) = {
 
@@ -82,7 +83,7 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
 
       val start: Array[Double] = y.laterMids.map{case(t, mid) =>
         mid match {
-          case Some(m) => m - y.mid
+          case Some(m) => m._2 - y.mid
           case None => 0.0
         }
       }
@@ -94,7 +95,37 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
       .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
 
   }
+
+  def gIplusOne(fairPriceDataFrame:  RDD[(Int, FairDataFrame)], numberOfLater: Int, gI: (Int, Int) => Double): RDD[(Int, Array[Double])] = {
+
+    def combOp( iXs: (Int, Array[Double]), jYs: (Int,Array[Double])): (Int, Array[Double]) = {
+
+      (iXs._1 + jYs._1) ->  iXs._2.zip(jYs._2).map(q => q._1 + q._2)
+    }
+
+    def seqOp(iXs: (Int, Array[Double]), y : FairDataFrame) : (Int,Array[Double]) = {
+
+      val start: Array[Double] = y.laterMids.zipWithIndex.map{
+        case(later, delayIndex) =>
+        later._2 match {
+          case Some(m) => gI(m._1, delayIndex)
+          case None => 0.0
+        }
+      }
+
+      (iXs._1 + 1) -> start.zip(iXs._2).map(q => q._1 + q._2)
+    }
+
+    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toArray.map(v =>  0.0))(seqOp, combOp)
+      .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
+
+  }
+
+
 }
+
+
+
 
 
 case class FairPriceDataFrame(quoteFile: String) {

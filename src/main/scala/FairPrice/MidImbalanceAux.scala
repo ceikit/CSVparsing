@@ -7,5 +7,5 @@ package FairPrice
 case class MidImbalanceAux(date: Int, time: Double, second: Int, milliSec: Int, mid: Double, binImbalance: Int)
 
 case class FairDataFrame(date: Int, time: Double, second: Int, milliSec: Int,
-                         mid: Double, binImbalance: Int, laterMids: Array[(Double ,Option[Double] )])
+                         mid: Double, binImbalance: Int, laterMids: Array[(Double ,Option[(Int, Double)] )])
 
