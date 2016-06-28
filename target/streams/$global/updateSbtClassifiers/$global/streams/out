@@ -612,9 +612,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 257ms :: artifacts dl 10ms
+[debug] :: resolution report :: resolve 414ms :: artifacts dl 11ms
 [debug] 	report for csvparsing#csvparsing$sbt_2.11;1.0 default produced in /Users/ceikit/Development/Scala/CSVparsing2/target/resolution-cache/reports/csvparsing-csvparsing$sbt_2.11-default.xml
-[debug] 	resolve done (257ms resolve - 10ms download)
+[debug] 	resolve done (414ms resolve - 11ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: csvparsing#csvparsing$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -956,6 +956,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 54ms :: artifacts dl 9ms
+[debug] :: resolution report :: resolve 60ms :: artifacts dl 11ms
 [debug] 	report for csvparsing#csvparsing$sources_2.11;1.0 default produced in /Users/ceikit/Development/Scala/CSVparsing2/target/resolution-cache/reports/csvparsing-csvparsing$sources_2.11-default.xml
-[debug] 	resolve done (54ms resolve - 9ms download)
+[debug] 	resolve done (60ms resolve - 11ms download)

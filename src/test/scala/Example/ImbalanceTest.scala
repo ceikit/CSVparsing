@@ -11,8 +11,8 @@ object ImbalanceTest {
 //    val tradesFile = "sashastoikov@gmail.com_FGBSH3_tradesQuotes_20130103_20130707.csv.gz"
 //    val quoteFile = "sashastoikov@gmail.com_FGBSH3_events_20130101_20130707_frequency_-1.csv.gz"
 
-    val tradesFile ="sashastoikov@gmail.com_7203.T_tradesQuotes_20130103_20150909.csv.gz"
-    val quoteFile ="sashastoikov@gmail.com_7203.T_events_20130103_20130706_frequency_-1.csv.gz"
+    val tradesFile ="sashastoikov@gmail.com_5020.T_tradesQuotes_20130103_20150909"
+    val quoteFile ="sashastoikov@gmail.com_5020.T_events_20130101_20131206_frequency_-1.csv"
 
     lazy val dataCheck = DataCheckSingleAsset(tradesFile, quoteFile)
 
@@ -20,13 +20,11 @@ object ImbalanceTest {
 
     val binnedImbalance: RDD[(String, Int)] = TransformRDD.binnedRDD(100,
       dataCheck.quoteData
-        .filter( q => q._2.ask - q._2.bid == 5.0)
         .values.map(q => q.bidSize/(q.bidSize+q.askSize)))
 
-    val binnedImbalance2 = TransformRDD.binnedRDD(1000,
+    val binnedImbalance2 = TransformRDD.binnedRDD(10,
       dataCheck.quoteData
         //.filter( f => f._1.date.month.toInt == 2)
-        .filter( q => q._2.ask - q._2.bid == 5.0)
         .values.map(q => q.bidSize/(q.bidSize+q.askSize)))
 
 

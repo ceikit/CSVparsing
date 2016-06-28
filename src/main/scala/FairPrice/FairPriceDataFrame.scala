@@ -5,6 +5,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.hive.HiveContext
 
+import scala.collection.immutable.IndexedSeq
 import scala.collection.mutable.ArrayBuffer
 
 case class FairPriceDataFrameEfficient(quoteFile: String) {
@@ -16,8 +17,7 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
       .map { case (k, v) => NumericTime(k.numericDate, k.numericTime, k.numericSecond, k.numericMillisecond) -> v }
       .persist()
 
-
-  def makeMidPriceLater(numberOfBins: Int, delays: Array[Double]) = {
+  /*def makeMidPriceLater2(numberOfBins: Int, delays: Array[Double]): RDD[(Int, FairDataFrame)] = {
 
     def imbalance(quote: Quote, array: Array[((Double, Double), Int)]): Int = {
       val imbalance = quote.bidSize / (quote.bidSize + quote.askSize)
@@ -38,88 +38,157 @@ case class FairPriceDataFrameEfficient(quoteFile: String) {
     val dfA: RDD[MidImbalanceAux] =
       quoteSet.map(function).map(f => MidImbalanceAux(f._1, f._2, f._3, f._4, f._5, f._6))
 
-    val fairDataFrame: RDD[(Int, FairDataFrame)] =
-      dfA.map(v => v.date -> v).groupByKey()
-        .flatMap{
-          case (date,ls) =>
-            ls.map(x =>
-              x ->
-                delays
-                  .map(
-                    delay =>
-                    {
-                      val filtered =
-                        ls.filter(y =>  y.time <= x.time + delay  )//&& y.time >= x.time + dt._1 * (i-1)
+    dfA.map(v => v.date -> v).groupByKey()
+      .flatMap{
+        case (date,ls) =>
+          ls.par.map(x => {
+            val laters = delays.map(
+              delay =>
+              {
+                val filtered =
+                  ls.filter(y =>  y.time <= x.time + delay  )//&& y.time >= x.time + dt._1 * (i-1)
 
-                      filtered.isEmpty match {
-                        case false =>
-                          val value = filtered.maxBy(_.time)
-                          value.time -> Some(value.binImbalance -> value.mid)
-                        case true => x.time + delay -> None
-                      }
-                    }
-                  )
+                filtered.isEmpty match {
+                  case false =>
+                    val value = filtered.maxBy(_.time)
+                    value.time -> Some(value.binImbalance -> value.mid)
+                  case true => x.time + delay -> None
+                }
+              }
             )
-        }
-        .map( f =>
-          f._1.binImbalance ->
-            FairDataFrame(f._1.date, f._1.time, f._1.second, f._1.milliSec, f._1.mid, f._1.binImbalance, f._2)
-        )
+            x.binImbalance ->
+              FairDataFrame(x.date, x.time, x.second, x.milliSec, x.mid, x.binImbalance, laters)
+          }
+          ).seq
+      }
+  }*/
 
-    fairDataFrame
+  def makeMidPriceLater(numberOfBins: Int, delays: Vector[Double]): RDD[(Int, FairDataFrame)] = {
+
+    def imbalance(quote: Quote, array: Array[((Double, Double), Int)]): Int = {
+      val imbalance = quote.bidSize / (quote.bidSize + quote.askSize)
+      TransformRDD.binnedDouble(imbalance, array)._2
+    }
+
+    val listOfBins = ImbalanceUtilities.listOfBins(numberOfBins)
+
+
+    val function: ((NumericTime, Quote)) => (Int, Double, Double, Int) =
+      (q: (NumericTime, Quote)) =>
+        (q._1.numericDate, q._1.numericTime,
+          (q._2.ask + q._2.bid) / 2,
+          imbalance(q._2, listOfBins))
+
+
+    quoteSet.map(function).map(f => f._1 ->  MidImbalanceAux(f._1, f._2,  f._3, f._4))
+      .groupByKey()
+      .flatMap{
+        case (date,ls) =>
+          ls.par.map(x => {
+            x.binImbalance ->
+              FairDataFrame(
+                x.date,
+                x.time,
+                x.mid,
+                x.binImbalance,
+                delays.map(
+                  delay =>
+                  {
+                    val laterMid = ls.filter(y =>  y.time <= x.time + delay  ).maxBy(_.time)
+                    Later(laterMid.time, laterMid.binImbalance, laterMid.mid)
+                  }
+                )
+              )
+          }
+          ).seq
+      }
+
 
   }
 
 
+}
 
-  def g1(fairPriceDataFrame:  RDD[(Int, FairDataFrame)], numberOfLater: Int): RDD[(Int, Array[Double])] = {
+case class Later(time: Double, imbalanceBin: Int, mid: Double)
 
-    def combOp( iXs: (Int, Array[Double]), jYs: (Int,Array[Double])): (Int, Array[Double]) = {
+
+object FunctionApproximation {
+
+  def g1(fairPriceDataFrame:  RDD[(Int, FairDataFrame)], numberOfLater: Int): Vector[Vector[Double]] = {
+
+    def combOp( iXs: (Int, Vector[Double]), jYs: (Int,Vector[Double])): (Int, Vector[Double]) = {
 
       (iXs._1 + jYs._1) ->  iXs._2.zip(jYs._2).map(q => q._1 + q._2)
     }
 
-    def seqOp(iXs: (Int, Array[Double]), y : FairDataFrame) : (Int,Array[Double]) = {
+    def seqOp(iXs: (Int, Vector[Double]), y : FairDataFrame) : (Int,Vector[Double]) = {
 
-      val start: Array[Double] = y.laterMids.map{case(t, mid) =>
-        mid match {
-          case Some(m) => m._2 - y.mid
-          case None => 0.0
-        }
+      val start: Vector[Double] = y.laterMids.map(_.mid - y.mid)
+
+      (iXs._1 + 1) -> start.zip(iXs._2).map(q => q._1 + q._2)
+    }
+
+    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toVector.map(v =>  0.0))(seqOp, combOp)
+      .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
+      .sortByKey().values.collect().toVector
+
+  }
+
+
+  def gIplusOne(fairPriceDataFrame:  RDD[(Int, FairDataFrame)],
+                numberOfLater: Int,
+                gI: (Int, Int) => Double): Vector[Vector[Double]] = {
+
+    def combOp( iXs: (Int, Vector[Double]), jYs: (Int,Vector[Double])): (Int, Vector[Double]) = {
+
+      (iXs._1 + jYs._1) ->  iXs._2.zip(jYs._2).map(q => q._1 + q._2)
+    }
+
+    def seqOp(iXs: (Int, Vector[Double]), y : FairDataFrame) : (Int,Vector[Double]) = {
+
+      val start: Vector[Double] = y.laterMids.zipWithIndex.map{
+        case(later, delayIndex) => gI(later.imbalanceBin, delayIndex)
       }
 
       (iXs._1 + 1) -> start.zip(iXs._2).map(q => q._1 + q._2)
     }
 
-    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toArray.map(v =>  0.0))(seqOp, combOp)
+    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toVector.map(v =>  0.0))(seqOp, combOp)
       .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
+      .sortByKey().values.collect().toVector
+
+
 
   }
 
-  def gIplusOne(fairPriceDataFrame:  RDD[(Int, FairDataFrame)], numberOfLater: Int, gI: (Int, Int) => Double): RDD[(Int, Array[Double])] = {
+  def fromGplusOneToFunction(gPlusone:  Vector[Vector[Double]]): (Int, Int) => Double =
+    (imbalance: Int, delay :Int) => gPlusone(imbalance)(delay)
 
-    def combOp( iXs: (Int, Array[Double]), jYs: (Int,Array[Double])): (Int, Array[Double]) = {
 
-      (iXs._1 + jYs._1) ->  iXs._2.zip(jYs._2).map(q => q._1 + q._2)
-    }
+  def matrixToFunction(fairPriceDataFrame:  RDD[(Int, FairDataFrame)],
+                       numberOfLater: Int,
+                       gI : (Int, Int) => Double): (Int, Int) => Double =
+    fromGplusOneToFunction(gIplusOne(fairPriceDataFrame,numberOfLater, gI))
 
-    def seqOp(iXs: (Int, Array[Double]), y : FairDataFrame) : (Int,Array[Double]) = {
 
-      val start: Array[Double] = y.laterMids.zipWithIndex.map{
-        case(later, delayIndex) =>
-        later._2 match {
-          case Some(m) => gI(m._1, delayIndex)
-          case None => 0.0
-        }
+
+
+
+  def makeFunctions(fairPriceDataFrame:  RDD[(Int, FairDataFrame)],
+                    numberOfLater: Int,
+                    numberOfGfunctions: Int): IndexedSeq[((Int, Int) => Double, (Int, Int) => Double)] = {
+
+    // returns gi and the cumulative sum of gi's: List[gI, cumGi]
+    val gOne = fromGplusOneToFunction(g1(fairPriceDataFrame,numberOfLater))
+
+    (2 to numberOfGfunctions)
+      .scanLeft(gOne -> gOne){
+        case( (gI, cumGi) , i) =>
+          val gIplusOne = matrixToFunction(fairPriceDataFrame, numberOfLater, gI)
+          (gIplusOne , (x,y) => gIplusOne(x,y) + cumGi(x,y))
       }
-
-      (iXs._1 + 1) -> start.zip(iXs._2).map(q => q._1 + q._2)
-    }
-
-    fairPriceDataFrame.aggregateByKey(0 -> (1 to numberOfLater).toArray.map(v =>  0.0))(seqOp, combOp)
-      .mapValues{case(numberOfQuotesInBin, processedVector) => processedVector.map(_/numberOfQuotesInBin)}
-
   }
+
 
 
 }

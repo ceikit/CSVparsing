@@ -10,11 +10,12 @@ object ModifiedNumericalKeyStampFair {
   val conf = new SparkConf().setMaster("local[*]").setAppName("SparkCSVParsing")//.set("spark.executor.memory", "4g").set("spark.driver.memory", "8g")
 
   conf.registerKryoClasses(
-    Array(classOf[TQTimeKeyNumerical], classOf[TradeAndQuote], classOf[Quote], classOf[FairDataFrame])
+    Array(classOf[TQTimeKeyNumerical], classOf[TradeAndQuote], classOf[Quote], classOf[FairDataFrame],classOf[Vector[Later]])
   )
 
   val sc = new SparkContext(conf)
   val hiveContext = new HiveContext(sc)
+
 
   def makeTradesAndQuotesDataSet(fileName: String): RDD[(TQTimeKeyNumerical, TradeAndQuote)] = {
 
@@ -64,7 +65,7 @@ object ModifiedNumericalKeyStampFair {
     })
       .filter{quote => quote._2.ask > 0 && quote._2.bid > 0}
       .filter( q => q._2.bidSize > 0 && q._2.askSize > 0 )
-      .filter(v => v._1.numericDate == 41311)// || v._1.numericDate == 41310 || v._1.numericDate == 41309 )
+      //.filter(v => v._1.numericDate == 41311 && v._1.numericTime < 28848.309)// || v._1.numericDate == 41310 || v._1.numericDate == 41309 )
       //.groupByKey().mapValues(_.last)
 
   }

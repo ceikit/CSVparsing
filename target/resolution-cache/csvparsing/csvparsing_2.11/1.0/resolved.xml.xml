@@ -4,7 +4,7 @@
 		module="csvparsing_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160421180619"
+		publication="20160628190927"
 	>
 		<description>
 		CSVparsing
